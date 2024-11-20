@@ -1,0 +1,191 @@
+@import url(./reset.css);
+
+/* -------------頂端黏著header------------- */
+.wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1100px;   
+    margin: 0 auto;
+}
+
+.header1{
+    background-color: #4D606E;
+    display: flex;
+    height: 25px;    
+
+    padding: 0 80px;   
+}
+
+.header1 p{
+    color: white;
+    line-height: 25px;
+    margin: 0 auto;
+    word-spacing: 5px;
+    padding-left: 150px;
+}
+
+.social-link{
+    line-height: 25px;   
+}
+
+.social-link a{
+    display: inline-block;
+    margin-left: 20px;;
+    text-decoration: none;    
+}
+
+.header1 .fa-brands{
+    color: #000000;
+}
+
+.header2{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    margin-bottom: 30px;
+    height: 100px;
+     
+    border-radius: 0 0 10px 10px;    
+}
+
+.header2 img{
+    height: 90px;
+}
+
+.header2 ul{
+    display: flex;
+    margin: 0 auto;
+
+    padding-left: 70px;
+    /* 購物車左推40 + 會員登入本身30 */
+}
+
+.header2 li{    
+    font-weight: bold;
+    position: relative;
+    padding: 0 15px;
+}
+
+.header2 li:not(:last-child)::after{
+    content:"";    
+    width: 1px;
+    height: 40px;
+    background-color: #D9D9D9;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.header2 li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    position: relative;
+}
+
+.header2 li a:hover::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* .user-action{} */
+
+.user-action a{
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;
+    background-color: #75F068;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 4px black;
+}
+
+.user-action a:hover{
+    color: white;
+    background-color: #4A654A;
+    box-shadow: none;
+}
+
+.user-action a:last-child{
+    margin-left: 40px;
+}
+
+/* .user-action a img{} */
+
+/* ------------footer------------ */
+.footer{
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1100px;
+}
+
+.footer p{
+    font-size: 12px;
+    color: white;
+   
+    width: 200px;
+    
+}
+
+.footer img{
+    width: 80px;
+    
+}
+
+.footer ul{
+    display: flex;   
+}
+
+/* .footer li{} */
+
+.footer a{
+    margin-left: 30px;;
+    text-decoration: none;
+}
+
+.footer .fa-brands{
+    color: white;
+}
+
+/* header與footer共用hover  原因待詢問*/
+.fa-instagram:hover{
+    color: #FBFF25;
+}
+.fa-line:hover{
+    color: #00B900;
+}
+.fa-facebook:hover{
+    color: #0866FF;
+}
+
+

@@ -1,0 +1,197 @@
+body{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1100px;
+    margin: 0 auto;
+    background-color: #F1FBF2;    
+    font-family: "Noto Sans TC", serif;
+}
+
+.content{
+    margin: 0 auto;
+    width: 50%;  /*全螢幕1200px時 寬度600px*/
+    max-width: 600px;
+    font-size: 16px;
+}
+
+/* .checkout-progress{} */
+
+.checkout-progress ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-progress li{
+    margin: 0 5px;
+}
+
+.checkout-progress li:nth-child(1),.checkout-progress li:nth-child(5){
+    color: #9C9C9C;
+}
+
+/* 利用box使全部li(裡面的表單元素) flex 使表單齊頭式平等 */
+.box{    
+    background-color: #fff;
+    margin: 50px 0 40px;
+}
+
+.box li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box label{
+    flex-shrink: 0;  /*防止label被擠壓縮小*/
+    width: 80px;
+    margin-right: 20px;
+}
+
+/* .box input{} */
+
+.box select{
+    margin-right: 20px;
+}
+
+/* 第一層 收件人資料填寫 */
+.ship-info-input{
+    padding: 10px 200px 40px 40px;
+    border-bottom: 1px solid #858585;
+}
+
+.ship-info-input h1{
+    margin-bottom: 30px;
+}
+
+/* .ship-info-input ul{}
+
+.ship-info-input li{}
+
+.ship-info-input li input{}
+
+.ship-info-input label{}
+
+.ship-info-input select{} */
+
+#adderss_detail{
+    margin: 20px 0 0 85px;
+}
+
+/* .ship-info-input option{} */
+
+.ship-info-input li>p{
+    margin: 5px 0 0 85px;
+}
+
+/* 超商選擇按鈕 */
+.ship-info-input a{
+    display: block;
+    width: 90px;
+    height: 50px;
+    margin: 0 30px 0 20px;
+    color: black;
+    background-color: #68F0BD;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.ship-info-input a+span{
+    font-weight: bold;
+}
+
+/* 第二層 付款方式填寫 */
+.pay-type {
+    padding: 10px 0 40px 40px;
+}
+
+.pay-type h1{
+    margin-bottom: 30px;
+}
+
+/* .pay-type ul{}
+
+.pay-type li{} */
+
+.pay-type li:nth-child(4) input,.pay-type li:last-child input{ /*卡號 格跟 安全碼 格調整*/
+    width: 70px;
+    margin-right: 20px;
+}
+
+/* .pay-type input{}
+
+.pay-type label{}
+
+.pay-type select{} */
+
+.pay-type select+span{
+    margin: 5px;
+}
+
+/* .pay-type option{} */
+
+/* 第三層 訂單算式 */
+.order-info{    
+    padding: 55px 65px 120px 40px;
+    font-size: 10px;
+    border: 4xp solid #EEEEEE;
+}
+
+.order-info h1{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+table{
+    margin-left: 15px;
+    width: 100%;
+}
+
+/* tr{} */
+
+td{
+    height: 30px;
+}
+
+td:nth-child(2),td:last-child{
+    text-align: right;
+}
+
+/* 第四層 總結 */
+.total-price{
+    padding: 40px 0 40px;
+    border-top: 1px solid #858585;
+}
+
+.total-price p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.total-price a{
+    display: block;
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    background-color: #75F068;
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px black;
+
+    margin: 60px auto 0;
+}
+
+.total-price a:hover{
+    color: white;
+    background-color: #4A654A;
+    box-shadow: none;
+}
+
+

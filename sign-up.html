@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員註冊 Sign Up</title>
+    <link rel="stylesheet" href="./CSS/basic.css">
+    <link rel="stylesheet" href="./CSS/sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Yuji+Boku&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 頂端黏著header -->
+<div class="wrapper">
+
+    <div class="header1">
+        <p>Recording of Beetles</p>
+        <div class="social-link">
+            <a href="https://www.instagram.com/giraffa_beetle1001/"><i class="fa-brands fa-instagram fa-lg" ></i></a>
+            <a href="https://line.me/ti/p/061ly8VaI_"><i class="fa-brands fa-line " ></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100082416973415&mibextid=LQQJ4d"><i class="fa-brands fa-facebook " ></i></a>        
+        </div>        
+    </div>
+    <div class="header2">
+        <img src="./img/image-logo/white_border_logo.svg" alt="logo" class="white-logo">      
+        <ul>
+            <li><a href="./index.html">首頁</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./beetle-lab.html">甲蟲研究所</a></li>
+            <li><a href="./beetle-shop.html">翅鞘商店</a></li>
+            <li><a href="./beetle-bulletin.html">羽錄情報</a></li>
+        </ul>
+        <div class="user-action">
+            <a href="./login.html">會員登入</a>
+            <a href="./shopping-cart.html"><i class="fa-sharp fa-solid fa-cart-shopping" style="color: #000000;"></i> 購物車</a>    
+        </div>
+    </div>
+</div>
+<!-- 從這裡開始 -->
+<div class="content">
+    <h1>會員註冊</h1>
+    <form>
+    <div class="input-info">
+        <div class="input-info-left">
+            <ul>
+                <li>
+                    <label for="account">帳號：</label>
+                    <input type="text" id="account">
+                </li>
+                <li>
+                    <label for="email">電子信箱：</label>
+                    <input type="email" id="email">
+                </li>
+                <li>
+                    <label for="password-frist">密碼：</label>
+                    <input type="password" id="password-frist">
+                </li>
+                <li>
+                    <label for="password-again">再次輸入密碼：</label>
+                    <input type="password" id="password-again">
+                </li>
+            </ul>
+        </div>
+        <div class="input-info-right">
+            <ul>
+                <li>
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" placeholder="五條悟">
+                </li>
+                <li>
+                    <label for="phone">聯絡電話：</label>
+                    <input type="text" id="phone" pattern="\d{10}" maxlength="10" placeholder="0911111111">
+                </li>
+                <li>
+                    <label for="birthday-year">生日：</label>
+                        <select name="year" id="birthday-year">                            
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                        </select>
+                        <span>年</span>
+                        <select name="month" id="birthday-month">                       
+                            <option value="January">1</option>
+                            <option value="February">2</option>
+                            <option value="March">3</option>
+                            <option value="April">4</option>
+                            <option value="May">5</option>
+                            <option value="June">6</option>
+                            <option value="July">7</option>
+                            <option value="August">8</option>
+                            <option value="September">9</option>
+                            <option value="October">10</option>
+                            <option value="November">11</option>
+                            <option value="December">12</option>
+                        </select>
+                        <span>月</span>
+                        <select name="day" id="birthday-day">                        
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <span>日</span>
+                    
+                </li>
+                <li>
+                    <label for="">地址：</label>
+                    <select name="input_adderss_city" id="adderss_city">
+                    <option value="taipei">台北市</option>
+                    <option value="kaohsiung">高雄市</option>
+                    <option value="taichung">台中市</option>
+                    <option value="taoyuan">桃園市</option>
+                    <option value="tainan">台南市</option>
+                    <option value="keelung">基隆市</option>
+                    <option value="hsinchu">新竹市</option>
+                    <option value="chiayi">嘉義市</option>
+                    <option value="newtaipei">新北市</option>
+                    <option value="yilan">宜蘭縣</option>
+                    <option value="hsinchu_county">新竹縣</option>
+                    <option value="miaoli">苗栗縣</option>
+                    <option value="taichung_county">台中縣</option>
+                    <option value="changhua">彰化縣</option>
+                    <option value="nantou">南投縣</option>
+                    <option value="yulin">雲林縣</option>
+                    <option value="chiayi_county">嘉義縣</option>
+                    <option value="tainan_county">台南縣</option>
+                    <option value="kaohsiung_county">高雄縣</option>
+                    <option value="pingtung">屏東縣</option>
+                    <option value="taitung">台東縣</option>
+                    <option value="huaian">花蓮縣</option>
+                    <option value="keelung_county">澎湖縣</option>
+                    <option value="keelung_county">金門縣</option>
+                    <option value="kinmen">連江縣</option>
+                </select>
+                <select name="input_address_district" id="address_district">
+                    <option value="xinyi">信義區</option>
+                    <option value="zhongshan">中山區</option>
+                    <option value="datong">大同區</option>
+                    <option value="wenshan">文山區</option>
+                    <option value="daan">大安區</option>
+                    <option value="shilin">士林區</option>
+                    <option value="beitou">北投區</option>
+                    <option value="songshan">松山區</option>
+                    <option value="neihu">內湖區</option>
+                    <option value="nangang">南港區</option>
+                    <option value="banciao">板橋區</option>
+                    <option value="xinzhuang">新莊區</option>
+                    <option value="zhonghe">中和區</option>
+                    <option value="yonghe">永和區</option>
+                    <option value="sanchong">三重區</option>
+                    <option value="tucheng">土城區</option>
+                    <option value="xindian">新店區</option>
+                    <option value="shulin">樹林區</option>
+                    <option value="sanxia">三峽區</option>
+                    <option value="yingge">鶯歌區</option>
+                    <option value="linkou">林口區</option>
+                    <option value="taoyuan">桃園區</option>
+                    <option value="zhongli">中壢區</option>
+                    <option value="pingzhen">平鎮區</option>
+                    <option value="yangmei">楊梅區</option>
+                    <option value="bade">八德區</option>
+                    <option value="guishan">龜山區</option>
+                    <option value="dayuan">大園區</option>
+                    <option value="guanyin">觀音區</option>
+                    <option value="longtan">龍潭區</option>
+                </select>
+                <input type="text" name="input_adderss_detail" id="adderss_detail" placeholder="米花大街99號99樓">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="botton-box">
+        <button type="submit">送出</button>
+    </div>
+    </form>
+
+</div>
+<!-- footer -->
+    <div class="footer">
+        <p>Copyright 2024 © 甲蟲羽錄</p>
+        <img src="./img/image-logo/white_basic.svg" alt="logo">
+        <ul>
+            <li><a href="https://www.instagram.com/giraffa_beetle1001/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+            <li><a href="https://line.me/ti/p/061ly8VaI_"><i class="fa-brands fa-line fa-2xl"></i></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100082416973415&mibextid=LQQJ4d"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+        </ul>
+     </div>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+body{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1100px;
+    margin: 0 auto;
+    background-color:  #F1FBF2    ;
+    font-family: "Noto Sans TC", serif;
+}
+/* 麵包屑導引 */
+.breadcrumb{
+    margin: 30px 0 0 40px;
+    line-height: 20px;
+}
+
+.breadcrumb ol{
+    display: flex;
+}
+
+.breadcrumb li{
+    color: black;
+    font-weight: bold;
+}
+
+
+.breadcrumb a{
+    color: black;
+    text-decoration: none;    
+}
+
+/* 內容 */
+.content{
+    width: 83%;
+    margin: 30px auto 50px;
+    background-color: #FFF4E0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px;
+    font-size: 26px;
+    padding: 30px 30px 200px;
+}
+
+.content h2{
+    width: 75%;
+    margin: 0 auto 55px;
+    line-height: 1.6;
+}
+
+.content p{
+    font-weight: bold;
+}
+
+/* 入場動畫圖 */
+.beetle-background{
+    background-image: url(../img/img-beetle-bulletin/main-pic-no-bg.png);
+    width: 950px;
+    height: 330px;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    position: relative;
+}
+
+/* 左進圖 */
+.beetle-background::before{
+    content: "";
+    display: block;
+    background-image: url(../img/img-beetle-bulletin/beetle-left.png);
+    background-size: cover;
+    width: 506px;
+    height: 330px;
+    z-index: 1000;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    opacity: 1;
+}
+
+/* 右進圖 */
+.beetle-background::after{
+    content: "";
+    display: block;
+    background-image: url(../img/img-beetle-bulletin/beetle-right.png);
+    background-size: cover;
+    width: 414px;
+    height: 329px;
+    /* z-index: 1000; */
+
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.explosion{
+    opacity: 0;
+
+    position: absolute;
+    bottom: -20px;
+    left: 125px;
+}
+
+/* --------------------animation---------------------- */
+
+.beetle-background{
+    animation: bigBG 1.2s ease-out forwards;
+}
+
+.beetle-background::before{
+    animation: running-beetle-left .8s ease-out forwards;
+}
+
+.beetle-background::after{
+    animation: running-beetle-right .8s ease-out forwards;
+}
+
+.explosion{
+    animation: displayExplosion .7s .64s linear forwards;
+}
+
+@keyframes bigBG{
+    0%{transform: scale(3);z-index: 1001;} 
+    99%{transform:scale(1);z-index: 1001;} 
+    100%{transform: scale(1);z-index: 0}
+}
+
+@keyframes running-beetle-left{
+    0%{transform: translateX(-700px);opacity: 0;}
+    60%{transform: translateX(100px);opacity: .9;rotate:-20deg;}
+    80%{transform: translateX(100px);opacity: 1;rotate:-60deg;}
+    100%{transform: translateX(0px);opacity: 1;}
+}
+
+@keyframes running-beetle-right{
+    0%{transform: translateX(700px);opacity: 0;}
+    60%{transform: translateX(-100px);opacity: .9;rotate:20deg;}
+    80%{transform: translateX(-100px);opacity: 1;rotate:60deg;}
+    100%{transform: translateX(0px);opacity: 1;}
+}
+
+@keyframes displayExplosion{
+    0%{transform: scale(1.5);opacity: 0}
+    20%{transform: scale(1);opacity: 1}
+    100%{transform: scale(1);opacity: 0}
+}
+
+/* --------------------animation----------------------- */
+
+
+.content h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0 40px;
+}
+
+.content h3{
+    font-size: 26px;
+}
+
+.content h3 i{
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+.content ul{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 90px;
+}
+
+.content li{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}
+
+.content a{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.social-button li:first-child{
+    background-image: url(../img/img-beetle-bulletin/icon_facebook.png);
+}
+
+.social-button li:nth-child(2){
+    background-image: url(../img/img-beetle-bulletin/icon_LINE.png);
+}
+
+.social-button li:last-child{
+    background-image: url(../img/img-beetle-bulletin/icon_IG.png);
+}

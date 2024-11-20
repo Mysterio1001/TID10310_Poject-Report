@@ -1,0 +1,176 @@
+body{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1100px;
+    margin: 0 auto;
+    background-color: #F1FBF2;
+    font-family: "Noto Sans TC", serif;
+}
+
+.content{
+    width: 1150px;
+    margin: 0 auto 80px;
+}
+
+/* .checkout-progress{} */
+
+.checkout-progress ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-progress li{
+    margin: 0 5px;
+}
+
+.checkout-progress li:nth-child(3),.checkout-progress li:nth-child(5){
+    color: #9C9C9C;
+}
+
+/* .cart-detail{} */
+
+.cart-detail ul{
+    display: flex;
+    margin: 30px 0 5px;
+}
+
+/* .cart-detail li{} */
+
+.cart-detail li:first-child{
+    margin-left: 25px;
+}
+
+.cart-detail li:nth-child(2){
+    margin-left: 255px;
+}
+
+.cart-detail li:nth-child(3){
+    margin-left: 75px;
+}
+
+.cart-detail li:last-child{
+    margin-left: 70px;
+}
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+}
+    
+
+.l-cart{
+    background-color: white;
+    border-top: 4px solid #EFEFEF;
+    border-right: 4px solid #EFEFEF;
+    width: 50%;
+}
+
+.product-detail{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    margin: 10px 0 0 10px;
+}
+
+.product-detail h1{
+    width: 250px;
+}
+
+.product-detail img{
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+}
+
+.product-detail p{
+    width: 90px;
+    margin-left: 10px;
+}
+
+label{
+    margin-left: 55px;
+}
+
+.product-detail h1+p{
+    width: 100px;
+}
+
+.product-detail select+p{
+    margin-left: 55px;
+}
+
+.l-cart a{
+    display: block;
+    width: 75px;
+    height: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    color: black;
+    background-color: #75F068;
+    border-radius: 10px;
+
+    margin: 60px auto 0;
+}
+
+.r-cart{
+    background-color: white;
+    border-top: 4px solid #EFEFEF;
+    width: 50%;
+
+    padding: 45px 30px 30px;
+}
+
+.how-to-ship{
+    border-top: 2px solid #EFEFEF;
+    border-bottom: 2px solid #EFEFEF;
+    padding: 10px 10px 60px;
+}
+
+.how-to-ship h1{
+    margin-bottom: 30px;
+}
+
+/* .how-to-ship ul{} */
+
+.how-to-ship li{
+    margin-bottom: 10px;
+}
+
+.total{
+    border-bottom:2px solid #EFEFEF;;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.total p{
+    margin-bottom: 10px;
+}
+
+.total p:nth-child(2){
+    margin-bottom: 40px;
+}
+
+.r-cart a{
+    display: block;
+    width: 85px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    background-color: #75F068;
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px black;
+
+    margin: 60px auto 0;}
+
+.r-cart a:hover{
+    color: white;
+    background-color: #4A654A;
+    box-shadow: none;
+}
+

@@ -1,0 +1,167 @@
+body{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    background-color:  #F1FBF2;
+    font-family: "Noto Sans TC", serif;
+}
+
+.hero-img{
+    background-image: url(../img/image-news/hero-bgi.png);
+    width: 1150px;
+    height: 500px;
+    background-size: cover;
+
+    margin: 0 auto;
+    
+    position: relative;
+    
+}
+/* .tags{} */
+
+.tags ul{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 50px 0 55px;
+}
+
+.tags ul li, .news-list h3{
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid black;
+   
+    border-radius: 5px;
+}
+
+/* 點擊全部消息時 其他tags變成灰色 */
+.all-news:active ~li{
+    background-color: grey;
+}
+
+.tags ul li:first-child{
+    background-color: #F7F25B;
+    cursor: pointer;
+}
+
+.notice{
+    background-color: #EF6C57;
+}
+
+.even{
+    background-color: #FCCF5B;
+}
+
+.breeding-info{
+    background-color: #8BC34A;
+}
+
+.news-list{
+    margin-bottom: 100px;
+}
+
+.news-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 60px;
+
+    padding-left: 30px;
+}
+
+.news-list li{
+    background-color: #FFF4E0;
+    width: 340px;
+    height: 500px;
+}
+
+.news-list img{
+    display: block;
+    width: 320px;
+    height: 250px;
+    margin: 10px;
+    
+}
+
+.news-list h3{
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin: 20px auto 30px;
+}
+
+.news-list p{
+    text-align: center;
+}
+
+.news-list span{
+    display: block;
+    text-align: center;
+    padding: 20px 65px 20px;
+    line-height: 20px;
+}
+
+/*swiper   大圖輪播*/
+
+.swiper {
+    width: 1150px;
+    height: 500px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-wrapper{
+    position: relative;
+  }
+
+  .swiper-slide h1{
+    color: rgb(255, 255, 255);
+    background-color: rgb(106, 228, 132);
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0 20px;
+    border-radius: 30px;
+
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+  }
+
+  .swiper-button-next{
+        color: #EF6C57;
+  }
+  
+  /* 輪播按鈕覆寫 */
+
+/* .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: '';
+
+    background-color: #dfdfdf;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+} */

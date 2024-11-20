@@ -1,0 +1,268 @@
+
+
+body{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(180deg,#4A654A 0%,#68F0BD 50%,#5D7C71 100%);
+    font-family: "Noto Sans TC", serif;
+} 
+
+/* img全部加上圓角 */
+img{
+    border-radius: 10px;
+}
+/* ------------首頁第一部分----------- */
+
+.main-title{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.title-left h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-bottom: 10px;
+
+}
+
+.title-left h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 55px;
+}
+
+.main-title p{    
+    text-align: right;
+    line-height: 40px;
+}
+
+.main-pic{
+    width: 1200px;
+    height: auto;
+    box-shadow: 0 4px 4px 0 #000000;
+    border-radius: 10px; /*外部容器變圓角*/    
+
+    display: flex;
+}
+
+/* 做成3分割圖 */
+.main-pic li{
+
+    background-size: cover;
+    background-position: center center;   
+    transition: .3s;    
+
+    filter: brightness(90%); 
+    padding-bottom: 56.25%;
+}
+
+.main-pic li:nth-child(1){
+    border-radius: 10px 0 0 10px; /*內部li 左上 左下變圓角*/  
+}
+
+.main-pic li:nth-child(3){
+    border-radius: 0 10px 10px 0; /*內部li 右上 右下變圓角*/  
+}
+
+.item1{
+    background-image: url(../img/image-index/main-left.png);
+    flex-grow: 1;
+}
+
+.item2{
+    background-image: url(../img/image-index/main.png);
+    flex-grow: 1;
+}
+
+.item3{
+    background-image: url(../img/image-index/main-right.png);
+    flex-grow: 1;
+}
+
+.main-pic li:hover{
+    flex-grow: 5;
+    filter: brightness(130%);
+}
+
+/* ------------首頁第二部分------------ */
+.main-content{
+    margin: 60px auto;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content h1, .main-content h2{
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-content h1{    
+    font-size: 96px;
+    letter-spacing: 30px;
+    position:relative;
+}
+/* 標題文字底層設計框 */
+.main-content h1::before{
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 400px;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    margin: auto;
+    
+    z-index: -1;
+}
+
+.main-content h2{
+    font-size: 30px;
+    letter-spacing: 5px;
+    word-spacing: 5px; 
+    padding-right: 40px;
+    overflow: hidden;     
+}
+
+/* .main-content ul{} */
+
+.main-content ul li{
+    margin-bottom: 30px;    
+}
+
+.main-content a{
+    font-size: 25px;
+    margin: 15px 0;
+    font-weight: bold; 
+    text-decoration: none;
+}
+/* trans作為容器使img可以隱藏超出容器的部分 */
+.trans{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    overflow: hidden;
+    width: 350px;
+    height: 262.5px;
+
+    margin-bottom: 10px;
+/* 容器圓角化使img縮放時可以維持圓角 */
+    border-radius: 10px;
+}
+/* 慢動作進場 */
+.main-content ul li img{
+    width: 100%;
+    height: 100%;
+    transition:transform 3s;          
+}
+
+.main-content ul li img:hover{
+    transform:scale(1.2);
+}
+
+.main-content ul li span{
+    color: #000000;
+    text-align: center;
+}
+
+/* ------------首頁第三部分------------ */
+.main-extra{
+    display: flex;
+    justify-content:space-between;
+}
+
+.main-extra ul{
+    display: flex;
+}
+
+.main-extra li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-right: 30px;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+/* 獎牌偽元素 */
+.main-extra li:first-child::before{
+    content: " ";
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-image: url(../img/image-index/picOfAward.png);
+
+    position: absolute;
+    bottom: 15px;
+    left: -20px;
+    margin: auto;
+
+    opacity: 1;  /*使偽元素取消透明*/
+    z-index: 1000;  /*使偽元素提升取消透明優先度*/
+}    
+
+.main-extra img{
+    height: 300px;
+    opacity: 0.5;
+    transition: opacity .3s;       
+}
+
+.main-extra img:hover{
+    opacity: 1;
+}
+
+.main-extra span{
+    color: white;
+    font-size: 28px;
+
+    margin-top: 10px;
+}
+
+/* h1,h2垂直顯示 */
+.main-extra h1, .main-extra h2{
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-extra h1{
+    font-size: 40px;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 0 50px 40px;
+    letter-spacing: 3px;
+    
+    position:relative;
+}
+/* h1加上偽元素"2025"  並取消父元素帶來的垂直效果*/
+.main-extra h1::before{
+    content: "2025";
+    display: block;
+    font-size: 40px;
+    writing-mode: horizontal-tb;
+
+    position:absolute;
+    top: -30px;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+
+.main-extra h2{
+    font-size: 20px;
+    letter-spacing:5px;
+    word-spacing: 5px;
+    padding-top: 20px; 
+    flex-grow: 2;
+}
