@@ -43,8 +43,11 @@ button{
 }
 
 .search i{
-    margin-right: 10px;
-    
+    margin-right: 10px;    
+}
+
+.search i:hover{
+    transform: scale(1.5);
 }
 
 .search input{

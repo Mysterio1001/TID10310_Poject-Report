@@ -87,14 +87,19 @@
     display: block;
     text-decoration: none;
     color: black;
+    transition: transform 0.3s ease;
 
     position: relative;
+}
+
+.header2 li a:hover {
+    transform: translate(0,-5px);
 }
 
 .header2 li a:hover::before{
     content: "";
     display: block;
-    width: 40px;
+    width: 30px;
     height: 1px;
     background-color: black;
     position: absolute;

@@ -70,6 +70,10 @@ body{
     position: relative;
 }
 
+.r-list li:hover{
+    font-weight: bold;
+}
+
 .r-list li::after{
     content: "more";
     display: block;
@@ -102,9 +106,13 @@ body{
 }
 
 .search i{
-    margin-right: 10px;
-    
+    margin-right: 10px;    
 }
+
+.search i:hover{
+    transform: scale(1.5);
+}
+
 
 .search input{
     width: 110px;
