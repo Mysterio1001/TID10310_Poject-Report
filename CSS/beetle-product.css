@@ -174,7 +174,7 @@ button{
      
 }
 
-.product-info ul{}
+/* .product-info ul{} */
 
 .product-info li{
     margin-bottom: 20px;
@@ -202,9 +202,9 @@ button{
     grid-column: span 2;
 }
 
-.size{}
+/* .size{} */
 
-.size label{}
+/* .size label{} */
 
 .size select{
     width: 180px;
@@ -270,7 +270,7 @@ button{
     gap: 40px;
 }
 
-.middle-shell li{}
+/* .middle-shell li{} */
 
 .middle-shell a{
     display: block;

@@ -84,6 +84,9 @@ button{
     width: 130px;
     height: 340px;
     margin-left: 55px;
+
+    position: sticky;
+    top: 220px;
 }
 
 .l-list h2{

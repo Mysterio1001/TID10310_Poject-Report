@@ -44,6 +44,7 @@ body{
 
 .input-info input{
     width: 150px;
+    line-height: 1.6;
 }
 
 .input-info input, .input-info select{
@@ -81,7 +82,10 @@ body{
 .input-info-right select{
     margin-right: 5px;
     width: 70px;
+
+   font-size: 16px
 }
+
 
 #adderss_detail{
     width: 200px;

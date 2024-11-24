@@ -40,7 +40,8 @@ li>p{
 }
 
 input{
-    width: 300px;
+    width: 250px;
+    line-height: 1.6;
 }
 
 .content form>p{
