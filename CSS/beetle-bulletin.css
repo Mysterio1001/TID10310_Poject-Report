@@ -5,6 +5,8 @@ body{
     margin: 0 auto;
     background-color:  #F1FBF2    ;
     font-family: "Noto Sans TC", serif;
+    
+    overflow: hidden;
 }
 /* 麵包屑導引 */
 .breadcrumb{
