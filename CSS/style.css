@@ -1,5 +1,3 @@
-
-
 body{
     width: 100%;
     max-width: 1200px;
@@ -7,7 +5,7 @@ body{
     margin: 0 auto;
     background: linear-gradient(180deg,#4A654A 0%,#68F0BD 50%,#5D7C71 100%);
     font-family: "Noto Sans TC", serif;
-} 
+}
 
 /* img全部加上圓角 */
 img{

@@ -6,7 +6,8 @@ body{
     background-color:  #F1FBF2    ;
     font-family: "Noto Sans TC", serif;
     
-    overflow: hidden;
+        
+    overflow-x: hidden;  /*僅讓x軸隱藏 不會出現橫向卷軸*/
 }
 /* 麵包屑導引 */
 .breadcrumb{
