@@ -208,8 +208,8 @@ img{
     left: -20px;
     margin: auto;
 
-    opacity: 1;  /*使偽元素取消透明*/
-    z-index: 1000;  /*使偽元素提升取消透明優先度*/
+    z-index: 1000;  /*使偽元素提升*/
+    pointer-events: none; /*偽元素可穿透觸發hover*/
 }    
 
 .main-extra img{
