@@ -107,61 +107,151 @@ body{
 
 /*swiper   大圖輪播*/
 
+/* Swiper容器 */
 .swiper {
     width: 1150px;
     height: 500px;
-  }
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Slide圖片容器 */
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* 平滑過渡 */
+    width: calc(1150px * 5); /* 總寬度 = 單張寬度 * 圖片數 */
+    height: 100%;
+}
+
+.slide {
+    width: 1150px; /* 單張圖片寬度 */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 按鈕樣式 */
+.slider-btn{
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5); /* 預設灰色 (可修改) */
+    cursor: pointer;
+
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .swiper-wrapper{
-    position: relative;
-  }
-
-  .swiper-slide h1{
-    color: rgb(255, 255, 255);
-    background-color: rgb(106, 228, 132);
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 1.5;
-    padding: 0 20px;
-    border-radius: 30px;
 
     position: absolute;
-    right: 10px;
-    bottom: 30px;
-  }
-
-  .swiper-button-next{
-        color: #EF6C57;
-  }
-  
-  /* 輪播按鈕覆寫 */
-
-/* .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-    content: '';
-
-    background-color: #dfdfdf;
-    display: block;
+    top: 50%;
+    transform: translateY(-50%); /*位移自身的50%*/
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    z-index: 10;
 }
 
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    content: 'next';
-} */
+.slider-btn::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid white;
+   
+}
+
+.prev{
+    left: 10px; /*position: absolute*/
+}
+
+.prev::before{
+    border-color: transparent white transparent transparent;
+    transform: translateX(-7px); /*位移自身的-7px*/
+}
+
+.next{
+    right: 10px; /*position: absolute*/
+}
+
+.next::before{
+    border-color: transparent transparent transparent white;  
+    transform: translateX(7px); /*位移自身的7px*/  
+}
+
+.slider-btn:hover {
+    background-color: rgba(128, 128, 128, 0.8); /* 修改顏色時，可調整此處 */
+}
+
+
+
+/* 點的樣式 */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc; /* 預設灰色 (可修改) */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #666; /* 預設深灰色 (可修改) */
+}
+
+/* 輪播圖各標題 */
+.box{    
+    position: relative;  /*輪播標題定位*/
+}
+
+.box::before{
+    content: "";
+    display: block;
+    width: auto;
+    height: 30px;
+    border: 1px solid black;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    z-index: 50;
+}
+
+.box1::before{
+    content: "五角大兜蟲大大大量發生中~~!!";
+}
+
+.box2::before{
+    content: "大海龜金龜";
+}
+
+.box3::before{
+    content: "日間野採:黃帶天牛!";
+}
+
+.box4::before{
+    content: "夜間野集課程招募中";
+}
+
+.box5::before{
+    content: "英特梅迪亞鬼豔鍬形蟲";
+}
+
+  
