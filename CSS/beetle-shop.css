@@ -1,17 +1,10 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1200px;
-    margin: 0 auto;
-    background-color:  #F1FBF2;
-    font-family: "Noto Sans TC", serif;
-}
+
 
 /* 全部a連結修改 */
 a{
     display: block;
     text-decoration: none;
-    color: black;
+    color: #FFFF;
 }
 
 /* 麵包屑導引 */
@@ -25,15 +18,9 @@ a{
 }
 
 .breadcrumb li{
-    color: black;
+    color: #FFFF;
     font-weight: bold;
 }
-
-
-/* .breadcrumb a{
-    color: black;
-    text-decoration: none;    
-} */
 
 .search{
     display: flex;
@@ -63,10 +50,15 @@ button{
     box-shadow: inset 0 4px 4px rgb(0,0,0,.3);
 }
 
+.search i{
+    color: #FFFF;
+}
+
+
 .search select{
     margin: 0 80px 0 20px;
     background-color: #7F7C7C;
-    color: #fff;
+    color: #FFFF;
     text-align: center;
     border-radius: 10px;
     width: 130px;
@@ -97,7 +89,7 @@ button{
 /* .l-list ul{} */
 
 .l-list li{
-   border-bottom: 1px solid #7F7C7C;
+   border-bottom: 1px solid #FFFF;
    position: relative;   
 }
 
@@ -105,25 +97,14 @@ button{
     border: none;
 }
 
-.l-list li:first-child{
+.l-list li:first-child a{
     font-weight: bold;
-    text-shadow: 4px 4px 12px;
+    color: #2b3632;
 }
 
-/* .l-list li:first-child::before{
-    content: "";
-    background-image: url(../img/img-beetle-shop/icons_beetle.svg);
-    width: 17px;
-    height: 17px;
-
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-} */
-
-.l-list li:hover{
+.l-list a:hover{
     font-weight: bold;
-    text-shadow: 4px 4px 12px;
+    color: #2b3632;
 }
 
 .l-list li:hover::before{
@@ -155,10 +136,11 @@ button{
 }
 
 .main-product li{
-   background-color: white;
-    box-shadow: 4px 4px 8px;
+    background-color: #FFFF;
+    box-shadow: 0 0 8px #313e3a;
+    border-radius: 10px;
 
-   position: relative;
+    position: relative;
 }
 
 .main-product li:first-child::before{
@@ -169,7 +151,7 @@ button{
     font-weight: bold;
     line-height: 60px;
     text-align: center;
-    background-color: rgb(252,207,91,.3);
+    background-color: rgb(93, 124, 113,.3);
 
     position: absolute;
     right: 0;
@@ -185,7 +167,7 @@ button{
     font-weight: bold;
     line-height: 60px;
     text-align: center;
-    background-color: rgb(252,207,91,.3);
+    background-color: rgb(93, 124, 113,.3);
 
     position: absolute;
     right: 0;
@@ -204,31 +186,45 @@ button{
    height: 500px;
 }
 
-/* .main-product a{} */
+.main-product a{
+    color: #161d1b;
+}
 
 .main-product img{
     width: 100%;
+    border-radius: 10px;
+}
+
+.img-box{
+    position: relative;
 }
 
 /* 售完標籤 */
-.main-product li:not(li:nth-child(5)):after{
+.img-box::after{
     content: "售完";
     font-weight: bold;
     font-size: 30px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 50px;
+    height: 100%;
     color: white;
-    background-color: rgb(255,0,0,0.4);
+    background-color: rgb(43, 54, 49,.4);
     text-align: center;
-    line-height: 50px;
+    line-height: 100%;
 
     position: absolute;
     top: 0;
     bottom:0;
     margin: auto;
 
+    border-radius: 10px;
     z-index: 800;
+}
+
+li:nth-of-type(5) .img-box::after{
+    display: none;
 }
 
 .main-product h3{

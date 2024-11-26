@@ -1,14 +1,6 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1100px;
-    margin: 0 auto;
-    background-color: #F1FBF2;    
-    font-family: "Noto Sans TC", serif;
-}
-
-.content{
-    background-color: #8DE7B1;
+.content{    
+    box-shadow: 0 0 10px #313e3a;
+    background-color: #455c54;
     width: 83%; /*大約1000px*/
     margin: 10px auto 50px;
     border-radius: 50px;
@@ -29,7 +21,6 @@ body{
     gap: 15px;    
     
 }
-
 .input-info li{
     display: flex;
     margin-bottom: 30px;    
@@ -37,7 +28,7 @@ body{
 }
 
 .input-info label{
-        flex-shrink: 0;
+    flex-shrink: 0;
     text-align: right;
     font-weight: bold;
 }
@@ -86,6 +77,10 @@ body{
    font-size: 16px
 }
 
+/* 輸入框的預設文字 */
+input::placeholder{
+    color: #98b0a7
+}
 
 #adderss_detail{
     width: 200px;
@@ -101,6 +96,14 @@ button{
     height: 50px;
     font-weight: bold;
     border-radius: 50px;
-    background-color: #FFF4E0;
     margin-bottom: 10px;
+    background:linear-gradient(to bottom, #98b0a7, #728f85);
+}
+
+button:hover{
+    background:linear-gradient(to bottom, #728f85, #5d7c71);
+}
+
+button:active{
+    background:linear-gradient(to bottom, #394c45, #313e3a);
 }

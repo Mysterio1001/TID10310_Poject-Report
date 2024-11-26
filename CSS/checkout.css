@@ -1,17 +1,9 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1100px;
-    margin: 0 auto;
-    background-color: #F1FBF2;    
-    font-family: "Noto Sans TC", serif;
-}
-
 .content{
     margin: 0 auto;
     width: 50%;  /*全螢幕1200px時 寬度600px*/
     max-width: 600px;
     font-size: 16px;
+    color: #FFFF;
 }
 
 /* .checkout-progress{} */
@@ -27,13 +19,14 @@ body{
 }
 
 .checkout-progress li:nth-child(1),.checkout-progress li:nth-child(5){
-    color: #9C9C9C;
+    color: #98b0a7;
 }
 
 /* 利用box使全部li(裡面的表單元素) flex 使表單齊頭式平等 */
 .box{    
-    background-color: #fff;
+    background-color:#FFFF;
     margin: 50px 0 40px;
+    color: #161d1b;
 }
 
 .box li{
@@ -57,11 +50,12 @@ body{
 
 /* 第一層 收件人資料填寫 */
 .ship-info-input{
-    padding: 10px 200px 40px 40px;
+    padding: 20px 200px 40px 40px;
     border-bottom: 1px solid #858585;
 }
 
 .ship-info-input h1{
+    font-weight: bold;
     margin-bottom: 30px;
 }
 
@@ -91,12 +85,13 @@ body{
     width: 90px;
     height: 50px;
     margin: 0 30px 0 20px;
-    color: black;
-    background-color: #68F0BD;
+    color: #161d1b;
+    background:linear-gradient(to bottom, #98b0a7, #728f85);
     text-decoration: none;
     line-height: 50px;
     text-align: center;
     font-size: 14px;
+    padding: 0 3px;
 }
 
 .ship-info-input a+span{
@@ -105,10 +100,11 @@ body{
 
 /* 第二層 付款方式填寫 */
 .pay-type {
-    padding: 10px 0 40px 40px;
+    padding: 20px 0 40px 40px;    
 }
 
-.pay-type h1{
+.pay-type h1{    
+    font-weight: bold;
     margin-bottom: 30px;
 }
 
@@ -135,17 +131,18 @@ body{
 
 /* 第三層 訂單算式 */
 .order-info{    
-    padding: 55px 65px 120px 40px;
-    font-size: 10px;
-    border: 4xp solid #EEEEEE;
+    padding: 55px 55px 120px 20px;       
+    border-top: 1px solid #5d7c71;
 }
 
 .order-info h1{
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
 table{
+    font-size: 12px;
     margin-left: 15px;
     width: 100%;
 }
@@ -163,7 +160,7 @@ td:nth-child(2),td:last-child{
 /* 第四層 總結 */
 .total-price{
     padding: 40px 0 40px;
-    border-top: 1px solid #858585;
+    border-top: 1px solid #98b0a7;
 }
 
 .total-price p{
@@ -181,17 +178,18 @@ td:nth-child(2),td:last-child{
     text-align: center;
     line-height: 30px;
     color: black;
-    background-color: #75F068;
+    background:linear-gradient(to bottom, #98b0a7, #728f85);
     border-radius: 10px;
-    box-shadow: 5px 4px 4px black;
+    box-shadow: 5px 4px 4px #5d7c71;
 
     margin: 60px auto 0;
 }
-
 .total-price a:hover{
-    color: white;
-    background-color: #4A654A;
-    box-shadow: none;
+    background:linear-gradient(to bottom, #728f85, #5d7c71);
+}
+
+.total-price a:active{
+    background:linear-gradient(to bottom, #394c45, #313e3a);
 }
 
 

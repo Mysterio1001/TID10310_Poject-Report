@@ -1,14 +1,7 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1100px;
-    margin: 0 auto;
-    background-color:  #F1FBF2    ;
-    font-family: "Noto Sans TC", serif;
-    
-        
+body{        
     overflow-x: hidden;  /*僅讓x軸隱藏 不會出現橫向卷軸*/
 }
+
 /* 麵包屑導引 */
 .breadcrumb{
     margin: 30px 0 0 40px;
@@ -20,13 +13,13 @@ body{
 }
 
 .breadcrumb li{
-    color: black;
+    color: #FFFF;
     font-weight: bold;
 }
 
 
 .breadcrumb a{
-    color: black;
+    color: #FFFF;
     text-decoration: none;    
 }
 
@@ -34,12 +27,12 @@ body{
 .content{
     width: 83%;
     margin: 30px auto 50px;
-    background-color: #FFF4E0;
+    background-color: #FFFF;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 5px 4px 4px;
     font-size: 26px;
     padding: 30px 30px 200px;
+    color: #2b3632;
 }
 
 .content h2{
@@ -54,6 +47,7 @@ body{
 
 /* 入場動畫圖 */
 .beetle-background{
+    margin: 0 auto;
     background-image: url(../img/img-beetle-bulletin/main-pic-no-bg.png);
     width: 950px;
     height: 330px;

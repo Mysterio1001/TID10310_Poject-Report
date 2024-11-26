@@ -1,11 +1,4 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1100px;
-    margin: 0 auto;
-    background-color:  #F1FBF2    ;
-    font-family: "Noto Sans TC", serif;
-}
+
 /* 麵包屑導引 */
 .breadcrumb{
     margin: 30px 0 0 40px;
@@ -17,13 +10,13 @@ body{
 }
 
 .breadcrumb li{
-    color: black;
+    color: #FFFF;
     font-weight: bold;
 }
 
 
 .breadcrumb a{
-    color: black;
+    color: #FFFF;
     text-decoration: none;
     
 }
@@ -39,17 +32,16 @@ body{
 
 .r-list{
     position: fixed; 
-    right: 70px;
+    right: 30px;
     bottom: 140px;
     top: 200px;
  /*固定在視窗右邊70px 且不低於80+25+25+10px 才不會碰到footer和page botton*/
 
-    background-color: rgb(241, 251, 242,0.5); /*視窗縮小時經過文字會透明化*/
+    background-color: rgb(93, 124, 113,0.5); /*視窗縮小時經過文字會透明化*/
     padding: 10px;
     line-height: 1.3;
     width: 130px;
-    height: 340px;
-    
+    height: 340px;    
 
     z-index: 1000;
 }
@@ -58,6 +50,7 @@ body{
 .r-list h2{
     font-weight: bold;
     margin-bottom: 25px;
+    color: #FFFF;
 }
 
 /* .r-list ul{} */
@@ -77,7 +70,8 @@ body{
 .r-list li::after{
     content: "more";
     display: block;
-    border-bottom: 1px solid #D3D3D3;
+    border-bottom: 1px solid #FFFF;
+    color: #FFFF;
     text-align: right;
     font-size: 8px;
 
@@ -89,7 +83,7 @@ body{
 
 .r-list a{
     text-decoration:none; 
-    color: black;
+    color: #FFFF;
 }
 
 .search{
@@ -133,42 +127,33 @@ body{
     height: 210px;
     clear: both;
     margin-bottom: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #313e3a;
+    background-color: #455c54;
+
 
     position: relative;
 }
 
-.main-content li::before{
-    content: "";
-    width: 880px;
-    height: 60px;
-    background-color: #FFF4E0;
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-
-    z-index: -1;;
+.main-content li:hover{
+    box-shadow: 0 0 10px #313e3a;
+    background-color: #98b0a7;
 }
 
-.main-content li>div{
+.record-box{
+    width: 60%;
     float: left;
+    
+    padding: 25px 25px 60px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .main-content a{
     display: block;
     text-decoration: none;
-    color: black;
+    color: #FFFF;
     font-weight: bold;
-    width: 545px;
-
-    padding: 10px;
-    box-sizing: border-box;
-
-}
-
-.main-content a:hover{
-    box-shadow: 0 0 4px rgb(0,0,0,.6);
 }
 
 .main-content h1{
@@ -176,34 +161,31 @@ body{
 }
 
 .main-content h2{
-    color: #7F7C7C;
+    color: #bfd0c9;
     font-size: 10px;
 
     margin-top: 15px;
 }
 
 .main-content p{
-    display: block;
     font-weight: normal;
-    /* width: 545px; */
-
     line-height: calc(1.5em*2); /*行高1.5倍的兩行*/
-    position: relative;
 }
 
-.main-content p::before{
+.record-box::before{
     content: "More";
     font-size: 1.1em;
 
     position: absolute;
-    right: 40px;
-    bottom: 0;
+    right: 0;
+    bottom: 75px;
 }
 
 .main-content img{
     width: 330px;
     height: 210px;
     float: right;
+    border-radius: 10px;
 }
 
 /* .page-button{} */

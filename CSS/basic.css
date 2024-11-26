@@ -1,12 +1,18 @@
-@import url(./reset.css);
+    @import url(./reset.css);
 
-html{
+/* html{
     background: linear-gradient(180deg,#4A654A 0%,#68F0BD 50%,#5D7C71 100%);
-}
-
+} */
 body{
+    width: 100vw;
+    min-width: 1100px;
+    margin: 0 auto;
+    background-color: #5d7c71;
+    font-family: "Noto Sans TC", serif;
+    color: #dfe8e4;
     font-size: 16px;
 }
+
 
 /* -------------頂端黏著header------------- */
 .wrapper{
@@ -17,10 +23,13 @@ body{
     max-width: 1200px;
     min-width: 1100px;   
     margin: 0 auto;
+    opacity: 1;
+
+    color: #2b3632;
 }
 
-.header1{
-    background-color: #4D606E;
+/* .header1{
+    background-color: #161d1b;
     display: flex;
     height: 30px;   
 
@@ -47,21 +56,21 @@ body{
 
 .header1 .fa-brands{
     color: white;
-}
+} */
 
 .header2{
-    background-color: white;
+    background: linear-gradient(to right, #98b0a7,#fff); 
     display: flex;
     align-items: center;
     padding: 0 40px;
     margin-bottom: 30px;
-    height: 80px;
+    height: 100px;
      
     border-radius: 0 0 10px 10px;    
 }
 
 .header2 img{
-    height: 70px;
+    height: 80px;
 }
 
 .header2 ul{
@@ -82,7 +91,7 @@ body{
     content:"";    
     width: 1px;
     height: 40px;
-    background-color: #D9D9D9;
+    background-color: #5d7c71;
     display: block;
     position: absolute;
     top: 0;
@@ -94,7 +103,7 @@ body{
 .header2 li a{
     display: block;
     text-decoration: none;
-    color: black;
+    color: #161d1b;
     transition: transform 0.3s ease;
 
     position: relative;
@@ -109,7 +118,7 @@ body{
     display: block;
     width: 30px;
     height: 1px;
-    background-color: black;
+    background-color: #161d1b;
     position: absolute;
     bottom: -5px;
     right: 0;
@@ -120,13 +129,12 @@ body{
 /* .user-action{} */
 
 .user-action a{
-    color: black;
+    color: #dfe8e4;
     font-weight: bold;
     display: inline-block;
-    border: 1px solid black;
     width: 80px;
     height: 30px;
-    background-color: #75F068;
+    background-color: #5d7c71;
     text-decoration: none;
     text-align: center;
     line-height: 30px;
@@ -137,10 +145,8 @@ body{
 }
 
 .user-action a:hover{
-    color: white;
-    background-color: #4A654A;
-    box-shadow: none;
-    box-shadow: 5px 4px 4px rgb(0, 0, 0,.5);
+    color: #dfe8e4;
+    background-color: #394c45;
 }
 
 .user-action a:last-child{
@@ -149,25 +155,29 @@ body{
 
 /* .user-action a img{} */
 
+.fa-cart-shopping{
+    color: #dfe8e4;
+}
+
 /* ------------footer------------ */
 .footer{
-    background-color: black;
+    background-color: #2b3632;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 40px;
     margin: 0 auto;
     box-sizing: border-box;
 
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     min-width: 1100px;
 }
 
 .footer p{
     font-size: 12px;
-    color: white;
+    color: #dfe8e4;
    
     width: 200px;
     

@@ -1,11 +1,4 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1100px;
-    margin: 0 auto;
-    background-color: #F1FBF2;    
-    font-family: "Noto Sans TC", serif;
-}
+
 
 .content{
     margin: 0 auto;
@@ -27,16 +20,17 @@ body{
 }
 
 .checkout-progress li:nth-child(1),.checkout-progress li:nth-child(3){
-    color: #9C9C9C;
+    color: #98b0a7;
 }
 
 .box{
-    background-color: #FFF4E0;
+    background-color: #FFFF;
     background-image: url(../img/img-order-completion/LOGO_bgipng.png);
     background-position: center 55px;
     background-repeat:no-repeat ;
     margin: 50px auto 75px;
     padding: 140px 0 30px;
+    border-radius: 10px;
 }
 
 .box h1{
@@ -44,13 +38,11 @@ body{
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 25px;
-}
-
-.box h1 span{
-    color: #8BC34A;
+    color: #161d1b;
 }
 
 .box p{
+    color: #161d1b;
     margin-top: 60px;
     text-align: center;
 
@@ -70,7 +62,7 @@ body{
 }
 
 .box p a{
-    color: #0866FF;
+    color: #98b0a7;
 }
 
 /* .social-button{} */

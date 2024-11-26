@@ -1,18 +1,11 @@
-body{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 1100px;
-    margin: 0 auto;
-    background-color: #F1FBF2;
-    font-family: "Noto Sans TC", serif;
-}
-
 .content{
-    background-color: #8DE7B1;
+    box-shadow: 0 0 10px #313e3a;
+    background-color: #455c54;
     width: 83%; /*大約1000px*/
     margin: 10px auto 50px;
     border-radius: 50px;
     padding: 55px 0 50px;
+    color: #FFFF;
 }
 
 h1{
@@ -57,23 +50,41 @@ button{
     height: 50px;
     font-weight: bold;
     border-radius: 50px;
-    background-color: #FFF4E0;
+    background:linear-gradient(to bottom, #98b0a7, #728f85);
 
     margin: 20px 0 25px;
 }
 
-.content>p>a,.content>a{
-    color: black;
+button:hover{
+    background:linear-gradient(to bottom, #728f85, #5d7c71);
 }
 
-.content>a{
+button:active{
+    background:linear-gradient(to bottom, #394c45, #313e3a);
+}
+
+/* ，加入我們 忘記密碼*/
+.join-us,.forgot-password{
+    color: #bfd0c9;
+}
+
+.join-us:hover,.forgot-password:hover{
+    color: #dfe8e4;
+}
+
+.join-us{
+    margin-left: 5px;
+}
+
+/* 忘記密碼 */
+.forgot-password{
     display: block;
     text-align: center;
     
     position: relative;
 }
 
-.content>a::before{
+.forgot-password::before{
     content: "";
     display: block;
     background-image: url(../img/img-login/TD.png);
@@ -86,7 +97,7 @@ button{
     bottom: -50px;
 }
 
-.content>a::after{
+.forgot-password::after{
     content: "";
     display: block;
     background-image: url(../img/img-login/DHH.png);
