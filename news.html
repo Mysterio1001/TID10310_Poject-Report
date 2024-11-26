@@ -9,20 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Yuji+Boku&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="./JavaScript/news-slider.js"></script>
+
 </head>
 <body>
 <!-- 頂端黏著header -->
     <div class="wrapper">
-
-        <!-- <div class="header1">
-            <p>Recording of Beetles</p>
-            <div class="social-link">
-                <a href="https://www.instagram.com/giraffa_beetle1001/" target="_blank"><i class="fa-brands fa-instagram fa-lg" ></i></a>
-                <a href="https://line.me/ti/p/061ly8VaI_" target="_blank"><i class="fa-brands fa-line " ></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100082416973415&mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook " ></i></a>        
-            </div>       
-        </div> -->
         <div class="header2">
             <a href="./index.html">
                 <img src="./img/image-logo/white_border_logo.svg" alt="logo" class="white-logo">
@@ -78,10 +69,10 @@
   <!-- 內容 -->
     <div class="tags">
         <ul>
-            <li class="all-news">全部消息</li>
-            <li class="notice">公告</li>
-            <li class="even">活動</li>
-            <li class="breeding-info">飼育情報</li>
+            <li id="all-news">全部消息&nbsp;<i class="fa-solid fa-bug"></i></li>
+            <li id="notice">公告&nbsp;<i class="fa-solid fa-bullhorn"></i></li>
+            <li id="even">活動&nbsp;<i class="fa-regular fa-calendar-days"></i></li>
+            <li id="breeding-info">飼育情報&nbsp;<i class="fa-solid fa-leaf"></i></li>
         </ul>
     </div>
     
@@ -89,47 +80,47 @@
         <ul>
             <li class="breeding-info">
                 <img src="./img/image-news/list1.png" alt="">
-                <p>五角大兜蟲大大大量發生中~~!!</p>
+                <p><i class="fa-solid fa-leaf"></i>&nbsp;五角大兜蟲大大大量發生中~~!!</p>
                 <span>第一輪幼蟲就破百，究竟還會有多少幼蟲呢?現在特價販售中，趕快去商店瞧瞧!</span>
             </li>
             <li class="notice">
                 <img src="./img/image-news/list2.png" alt="">
-                <p>甲蟲羽錄年曆預購出爐啦~</p>
+                <p><i class="fa-solid fa-bullhorn"></i>&nbsp;甲蟲羽錄年曆預購出爐啦~</p>
                 <span>讓甲蟲一起陪你開始新的一年!趕緊聯繫我們的小幫手吧~</span>
             </li>
             <li class="even">
                 <img src="./img/image-news/list3.png" alt="">
-                <p>活動快報-</p>
+                <p><i class="fa-regular fa-calendar-days"></i>&nbsp;活動快報-</p>
                 <span>凡是消費滿二百，就贈送一對白條綠花金龜成體 數量有限送完為止。</span>
             </li>
             <li class="notice">
                 <img src="./img/image-news/list4.png" alt="">
-                <p>注意!!</p>
+                <p><i class="fa-solid fa-bullhorn"></i>&nbsp;注意!!</p>
                 <span>感謝你的注意!!製作標本的人客請記得來領取你的商品!不然老闆的防潮箱要爆炸啦!!!!</span>
             </li>
             <li class="even">
                 <img src="./img/image-news/list5.png" alt="">
-                <p>活動快報</p>
+                <p><i class="fa-regular fa-calendar-days"></i>&nbsp;活動快報</p>
                 <span>一年一度的蟲季又來囉~想一起體驗大自然以及抓蟲點燈的樂趣?趕快來找我們報名吧~~!</span>
             </li>
             <li class="breeding-info">
                 <img src="./img/image-news/list6.png" alt="">
-                <p>大家敲碗已久的螃蟹鍬到貨啦!!</p>
+                <p><i class="fa-solid fa-leaf"></i>&nbsp;大家敲碗已久的螃蟹鍬到貨啦!!</p>
                 <span>來自非洲喀麥隆的珍奇異蟲又來了~數量有限售完為止唷。</span>
             </li>
             <li class="notice">
                 <img src="./img/image-news/list7.png" alt="">
-                <p>再次宣導</p>
+                <p><i class="fa-solid fa-bullhorn"></i>&nbsp;再次宣導</p>
                 <span>請不要將手指伸入鍬形蟲大顎及南洋大兜的頭胸甲縫隙中，若發生意外請自行負責。</span>
             </li>
             <li class="breeding-info">
                 <img src="./img/image-news/list8.png" alt="">
-                <p>甲蟲回憶錄</p>
+                <p><i class="fa-solid fa-leaf"></i>&nbsp;甲蟲回憶錄</p>
                 <span>大家耳熟能詳的獨角仙，但你想知道要如何養出大型個體嗎?趕快來看看甲蟲研究所吧!</span>
             </li>
             <li class="even">
                 <img src="./img/image-news/list9.png" alt="">
-                <p>活動快報</p>
+                <p><i class="fa-regular fa-calendar-days"></i>&nbsp;活動快報</p>
                 <span>南投仁愛鄉產兩點赤鋸齒鍬形蟲贈送中，出示IG追蹤畫面即可享有一對成蟲，送完為止。</span>
             </li>
         </ul>
@@ -149,6 +140,10 @@
 
 
 </body>
+<script src="./JavaScript/jquery-3.7.1.js"></script>
 <!-- 監聽滾動事件 -->
-<script src="./JavaScript/basic.js" ></script> 
+<script src="./JavaScript/basic.js" ></script>
+<!-- 輪播器 -->
+<script src="./JavaScript/news-slider.js"></script> 
+<script src="./JavaScript/news.js"></script>
 </html>

@@ -19,7 +19,7 @@
 }
 
 /* 過濾選單按鈕 */
-.tags ul li{    
+.tags ul li:not(.selected){    
     cursor: pointer;
 }
 
@@ -30,10 +30,25 @@
 }
 
 .tags ul li:not(:first-child){
-    background-color: #dfe8e4;
+    background-color: #FFFF;
     color: #728f85;
 }
 
+/* 點選後的 li 會禁用 cursor: pointer */
+.selected {
+    cursor: default;  /* 禁用指標 */
+}
+
+.selected:hover {
+    color: #FFFF;  /* 禁用 hover 色彩變化 */
+}
+
+/* 提升層級大於js寫入的內聯式樣式 */
+.tags ul li:not(.selected):hover {
+    color: #313e3a !important;
+}
+
+/* 項目清單 */
 .news-list{
     /* margin-bottom: 100px; */
     color: #161d1b;
