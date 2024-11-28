@@ -205,7 +205,7 @@ img{
     left: -20px;
     margin: auto;
 
-    z-index: 300;  /*使偽元素提升*/
+    z-index: 2;  /*使偽元素提升*/
     pointer-events: none; /*偽元素可穿透觸發hover*/
 }    
 

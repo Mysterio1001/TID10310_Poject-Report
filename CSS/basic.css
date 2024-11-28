@@ -273,6 +273,7 @@ body.active{
     height: 80px;
     padding-left: 30px;
     box-sizing: border-box;
+    z-index: 100;
     
     width: 100%;
     position: absolute; 
