@@ -292,12 +292,12 @@ body.active{
 }
 
 /* 分別進場 */
-.tl1{transition: left .3s 0}
-.tl2{transition: left .3s .1s}
-.tl3{transition: left .3s .2s}
-.tl4{transition: left .3s .3s}
-.tl5{transition: left .3s .4s}
-.tl6{transition: left .3s .5s}
+.tl1{transition: left .4s}
+.tl2{transition: left .4s .1s}
+.tl3{transition: left .4s .2s}
+.tl4{transition: left .4s .3s}
+.tl5{transition: left .4s .4s}
+.tl6{transition: left .4s .5s}
 
 
 .rwd-translate::before{
