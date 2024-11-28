@@ -24,15 +24,6 @@
 <body>
 <!-- 頂端黏著header -->
     <div id="wrapper" class="wrapper" style="opacity: 1;">
-    
-        <!-- <div class="header1">
-            <p>Recording of Beetles</p>
-            <div class="social-link">
-                <a href="https://www.instagram.com/giraffa_beetle1001/" target="_blank"><i class="fa-brands fa-instagram fa-lg" ></i></a>
-                <a href="https://line.me/ti/p/061ly8VaI_" target="_blank"><i class="fa-brands fa-line " ></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100082416973415&mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook " ></i></a>        
-            </div>       
-        </div> -->
         <div class="header2">
             <a href="./index.html">
                 <img src="./img/image-logo/white_border_logo.svg" alt="logo" class="white-logo">
@@ -50,6 +41,29 @@
             </div>
         </div>
     </div>
+<!-- ---RWD 1100px--- -->
+    <div class="header-rwd1">
+        <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+        <div id="rwd-box">
+            <ul class="rwd-list">
+                <li class="rwd-translate tl1"><a href="./index.html">首頁</a></li>
+                <li class="rwd-translate tl2"><a href="./news.html">最新消息</a></li>
+                <li class="rwd-translate tl3"><a href="./beetle-lab.html">甲蟲研究所</a></li>
+                <li class="rwd-translate tl4"><a href="./beetle-shop.html">翅鞘商店</a></li>
+                <li class="rwd-translate tl5"><a href="./beetle-bulletin.html">羽錄情報</a></li>
+                <li class="rwd-translate tl6"><a href="./login.html">會員登入</a></li>
+            </ul>            
+        </div>
+        <img src="./img/image-logo/rwd-white-logo.svg" alt="logo" class="rwd-logo">
+        <a href="./shopping-cart.html" class="rwd-cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+
+
 <!-- 首頁第一部分 -->   
         <div class="main-title">
             <div class="title-left">
@@ -66,8 +80,10 @@
     <!-- <img class="main-pic" src="./img/image-index/main.png" alt=""> -->
 <!-- 首頁第二部分 --> 
     <div class="main-content">
-        <h1>近期到貨</h1>
-        <h2>珍稀品種 難得可貴</h2>
+        <div class="content-title">
+            <h1>近期到貨</h1>
+            <h2>珍稀品種 難得可貴</h2>
+        </div>
         <ul>
             <li><a href="#"><div class="trans"><img src="./img/image-index/product1.png" alt="DHB T-brand"></div><span>日本大鍬 T-brand血統</span></a></li>
             <li><a href="#"><div class="trans"><img src="./img/image-index/product2.png" alt="DHH"></div><span>DHH長戟大兜 河野血統</span></a></li>
@@ -86,13 +102,15 @@
             <li><img src="./img/image-index/record3.png" alt="PGD 109mm"><span>PGD 109mm</span></li>
             <li><img src="./img/image-index/record4.png" alt="MT  90mm"><span>MT  90mm</span></li>
         </ul>
-        <h1>最新飼育紀錄</h1>
-        <h2>職人匠心 靈魂培育</h2>
+        <div class="extra-title">
+            <h1>最新飼育紀錄</h1>
+            <h2>職人匠心 靈魂培育</h2>
+        </div>
     </div>
    
 
     <!-- footer -->
-    <div class="footer">
+        <div class="footer">
         <p>Copyright 2024 © 甲蟲羽錄</p>
         <img src="./img/image-logo/white_basic.svg" alt="logo">
         <ul>
@@ -100,8 +118,8 @@
             <li><a href="https://line.me/ti/p/061ly8VaI_" target="_blank"><i class="fa-brands fa-line fa-2xl"></i></a></li>
             <li><a href="https://www.facebook.com/profile.php?id=100082416973415&mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
         </ul>
-     </div>
-</body>
+        </div>
+ </body>
 <!-- 監聽滾動事件 -->
 <script src="./JavaScript/basic.js" ></script> 
 </html>
