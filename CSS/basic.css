@@ -175,7 +175,7 @@ body::before{
 /* .footer li{} */
 
 .footer a{
-    margin-left: 30px;;
+    margin: 15px;
     text-decoration: none;
 }
 
@@ -290,6 +290,10 @@ body::before{
     text-align: center;
 }
 
+.footer-logo-rwd{
+    display: none;
+}
+
 /* ---------------------1000px--------------------- */
 @media (width <= 1000px){
 
@@ -317,14 +321,32 @@ body{
     display: flex;
 }
 
+}
+/* ------------------------430px------------------- */
+@media (width <= 430px){
 
+.footer-logo{
+    display: none;
+}    
 
-
-
-
-
-
-
+.footer-logo-rwd{
+    display: block;
+    border-radius: 0;
 
 }
+
+.footer{
+    height: 200px;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer p{
+    text-align: center;
+}
+
+}
+
+
 
