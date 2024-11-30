@@ -31,11 +31,21 @@ $('#productName').on('input', function(){
     }else{
         $('#searchBtn').prop('disabled', true); //空字串不啟用按鈕
     }
+
+    //搜尋列空白時回復        
+    if(productName ===""){
+        $('.main-product ul li').show(); //顯示網頁版所有商品
+        $('.rwd-product li').show();  //顯示手機版所有商品
+    }
+    
+
+
 }); 
 
 //(網頁版本)
 
 $('#searchBtn').on('click', function(){
+    event.preventDefault(); // 防止表單提交，避免頁面刷新
     
     let productName = $('#productName').val(); //輸入框的值
     
@@ -49,13 +59,6 @@ $('#searchBtn').on('click', function(){
             $(this).hide();
         }
     });
-  //搜尋列空白時回復
-  $('#productName').on('input', function(){
-    let productName = $(this).val();        
-    if(productName ===""){
-        $('.main-product ul li').show()
-    }
-})
     
     
 });
@@ -65,6 +68,7 @@ $('#searchBtn').on('click', function(){
 //(手機版本)
     
     $('#searchBtn').on('click', function(){
+        event.preventDefault(); // 防止表單提交，避免頁面刷新
         
         let productName = $('#productName').val(); //輸入框的值
         
@@ -84,12 +88,4 @@ $('#searchBtn').on('click', function(){
     
     })
 
-    //搜尋列空白時回復
-    $('#productName').on('input', function(){
-        let productName = $(this).val();        
-        if(productName ===""){
-            $('.rwd-product li').show()
-        }
-    })
-    
     });
