@@ -1,4 +1,4 @@
-
+ 
 
 /* .tags{} */
 
@@ -110,8 +110,8 @@
 /* Slider */
 .slider {
     position: relative;
-    width: 100%;
     height: 100%;
+    width: 1150px;
 }
 
 /* Slide圖片容器 */
@@ -126,6 +126,10 @@
     width: 1150px; /* 單張圖片寬度 */
     height: 100%;
     object-fit: cover;
+}
+
+.slide img{
+    width: 100%;
 }
 
 /* 按鈕樣式 */
@@ -246,4 +250,28 @@
     content: "英特梅迪亞鬼豔鍬形蟲";
 }
 
-  
+  /* -----------------------840px------------------- */
+  @media  (width <= 820px){
+.swiper{
+    width: 100vw;
+}
+
+.slider{
+    overflow: hidden;
+    width: 100vw;
+}
+
+.box{
+    object-fit: contain;
+}
+
+
+
+
+
+.news-list{
+    /* display: none; */
+}
+
+
+  }

@@ -296,7 +296,7 @@ img{
 }
 
 .item3{
-    width: 800px;
+    width: 100%;
     background-image: url(../img/image-index/main-rwd.png);
     background-size: cover;
     margin: 0 auto;
@@ -378,59 +378,79 @@ img{
     gap: 80px;
 }
 
-}
-/* ------------------------390px----------------------- */
-@media (width <= 430px){
-
-.main-title{
-    flex-direction: column;
-    align-items: center;
-}
-
-.title-left h1{
-    font-size: 30px;
-    margin: 0;
-}
-
-.title-left h2{
-    font-size: 15px;
-    margin: 10px 0 10px;
-    text-align: center;
-}
-
-.main-title p{
-    font-size: 10px;
-    margin: 0;
-    text-align: center;
-    line-height: 20px;
-}
-
-.content-title h1{
-    font-size: 30px;
-    letter-spacing: 10px;
-}
-
-.content-title h1:before{
-    display: none;
-}
-
-.content-title h2{
-    font-size: 15px;
-    margin: 10px 0 10px;
-}
-
-}
-/* ------------------------430px------------------- */
-@media (width <= 430px){
-
-.main-extra ul {
-    gap: 20px;
-}
-
 .main-extra img{
     opacity: 1;
 }
 
+}
+
+/* ------------------------600px----------------------- */
+@media (width <= 600px){
+    .main-title{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .title-left h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    .title-left h2{
+        font-size: 20px;
+        margin: 10px 0 10px;
+        text-align: center;
+    }
+    
+    .main-title p{
+        font-size: 10px;
+        margin: 0;
+        text-align: center;
+        line-height: 20px;
+    }
+    
+    .main-title p{
+        font-size: 10px;
+        margin: 0;
+        text-align: center;
+        line-height: 20px;
+    }
+    
+    .content-title h1{
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    
+    .content-title h1:before{
+        display: none;
+    }
+    
+    .content-title h2{
+        font-size: 15px;
+        margin: 10px 0 10px;
+    }
+    
+    .main-extra ul {
+        gap: 20px;
+    }
+
+}
+
+
+
+
+/* ------------------------430px----------------------- */
+@media (width <= 430px){
+
+.rwd-translate a{
+    font-size: 20px;
+}
 
 
 }
+
+
+
+
+
+

@@ -19,7 +19,7 @@ window.addEventListener('scroll', function(){
 const hamburger = document.querySelector('.hamburger');
 const disableScroll = document.querySelector('body');
 const rwdTranslate = document.querySelectorAll('.rwd-translate');   //選擇全部的.rwd-translate
-const bodyBlack = document.querySelector('#black')
+const bodyBlack = document.querySelector('#black');
 
 hamburger.addEventListener('click', function(){
    hamburger.classList.toggle('active');
@@ -43,5 +43,27 @@ hamburger.addEventListener('click', function(){
       
       
    })
+
+});
+// 點選遮罩後移除active
+
+const isActive = bodyBlack.classList.contains('active');
+
+bodyBlack.addEventListener('click', function(){
+   hamburger.classList.remove('active');
+   disableScroll.classList.remove('active');
+   bodyBlack.classList.remove('active');
+
+   rwdTranslate.forEach(function(arry, index){
+
+      // 如果進場is true
+         if(isActive){
+            arry.style.transitionDelay = `${index * 0.1}s`   //'索引'乘以0.1s；transitionDelay: CSS屬性 延遲
+         }else{     //如果是退場                    //(總數-1-'索引')*0.1s : 越前面越慢 第一個(6-1-0)*0.1=0.5
+            arry.style.transitionDelay = `${(rwdTranslate.length - 1 -index) * 0.1}s`  
+      }
+
+      arry.classList.remove('active');    
+   });
 
 });

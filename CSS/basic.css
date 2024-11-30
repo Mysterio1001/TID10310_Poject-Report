@@ -30,7 +30,7 @@ body.active{
     left: 0;
     right: 0;
     background-color: rgb(0, 0, 0,.8);
-    z-index: 999;
+    z-index: 2;
 
     display: none;
 }
@@ -45,7 +45,7 @@ body.active{
 .wrapper{
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1001;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -219,7 +219,7 @@ body.active{
 
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1001;
     width: 100%;
 
     margin-bottom: 20px;
@@ -266,14 +266,14 @@ body.active{
 /* 滑出式選單 */
 .rwd-translate{
     background: linear-gradient(to right, #bfd0c9,#f5f8f6); 
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 80px;
 
     height: 80px;
     padding-left: 30px;
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 9999;
     
     width: 100%;
     position: absolute; 
