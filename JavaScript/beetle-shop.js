@@ -89,3 +89,31 @@ $('#searchBtn').on('click', function(){
     })
 
     });
+
+
+    
+    // 監聽排序選單選項改變
+document.getElementById("order").addEventListener("change", function () {
+    const order = this.value;
+    //根據斷點做選擇選取對象
+    const isMobile = window.innerWidth <= 820; // 假設 820px 以下為手機版
+    const productList = isMobile ? document.querySelector(".rwd-product") : document.querySelector(".main-product ul");
+    const products = Array.from(productList.children); // 取得所有商品項目
+
+    // 根據選項排序
+    products.sort((a, b) => {
+        const priceA = parseInt(a.getAttribute("data-price"));
+        const priceB = parseInt(b.getAttribute("data-price"));
+        const dateA = new Date(a.getAttribute("data-date"));
+        const dateB = new Date(b.getAttribute("data-date"));
+
+        if (order === "high_to_low") return priceB - priceA;
+        if (order === "low_to_high") return priceA - priceB;
+        if (order === "new_to_old") return dateB - dateA;
+        if (order === "old_to_new") return dateA - dateB;
+        return 0; // 預設不排序
+    });
+
+    // 更新商品列表
+    products.forEach((product) => productList.appendChild(product));
+});
