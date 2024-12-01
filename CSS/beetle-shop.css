@@ -148,7 +148,7 @@ button{
     position: relative;
 }
 
-.main-product li:first-child::before{
+.main-product li[data-before=dhh]::before{
     content: "河野血統";
     width: 170px;
     height: 60px;
@@ -164,7 +164,7 @@ button{
     z-index: 500;
 }
 
-.main-product li:nth-child(4)::before{
+.main-product li[data-before=dhb]::before{
     content: "肝川血統";
     width: 170px;
     height: 60px;
@@ -228,7 +228,7 @@ button{
     z-index: 800;
 }
 
-li:nth-of-type(5) .img-box::after{
+li[data-after=pgn] .img-box::after{
     display: none;
 }
 
@@ -345,6 +345,7 @@ li:nth-of-type(5) .img-box::after{
 #filter{
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .search input{
@@ -434,7 +435,7 @@ li:nth-of-type(5) .img-box::after{
     position: relative;
 }
 
-.rwd-product li:first-child:before, .rwd-product li:nth-child(4):before{
+.rwd-product li[data-bfore=dhh]::before, .rwd-product li[data-bfore=dhb]::before{
     content: "河野血統";
     writing-mode: vertical-lr ;
     color: #161d1b;
@@ -450,7 +451,7 @@ li:nth-of-type(5) .img-box::after{
     line-height: 25px;
 }
 
-.rwd-product li:nth-child(4):before{
+.rwd-product li[data-bfore=dhb]::before{
     content: "肝川  血統";
 }
 
@@ -466,7 +467,37 @@ li:nth-of-type(5) .img-box::after{
 .rwd-box{
     margin-left: 10%;
     height: 100%;
+    position: relative;
 }
+
+.rwd-box::after{
+    content: "售完";
+    font-weight: bold;
+    writing-mode:vertical-lr;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: rgb(255,255,255,.4);
+    background-color: rgb(43, 54, 49,.4);
+    text-align: center;
+    line-height: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    margin: auto;
+
+    z-index: 2;
+}
+
+li[data-after=pgn] .rwd-box::after{
+    display: none;
+}
+
 
 .rwd-box img{
     height: 100%;

@@ -22,9 +22,9 @@ a{
 }
 
 .search{
-    display: flex;
+    display: flex;  
     justify-content: flex-end;
-    margin-right: 125px;
+    margin-right: 50px;
 }
 
 button{
@@ -66,6 +66,7 @@ button{
     width: 130px;
     height: 340px;
     margin-left: 55px;
+    box-sizing: border-box;
 }
 
 .l-list h2{
@@ -111,7 +112,7 @@ button{
 /* 上層商品購買區塊 */
 
 .hero-product{
-    width: 800px;
+    width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -122,20 +123,19 @@ button{
 }
 
 .hero-product>img{
-    width: 540px;
-    height: 577px;
-
     grid-row: span 2;
 }
 
 .product-info{
-    width: 316px;
+    width: 100%;
     height: 577px;
     background-color: #FFFF;
     padding: 20px 10px 40px;
     box-sizing: border-box;  
 
     grid-row: span 2;
+/* 全設定0.8rem h1 h2 h3下面再修改 */
+    font-size: 0.8rem; 
 }
 
 .product-info h1,.product-info h3{
@@ -145,11 +145,11 @@ button{
 }
 
 .product-info h1{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .product-info h3{
-    font-size: 12px;
+    font-size: 0.8rem;
     margin: 10px 0 20px;
     
 }
@@ -158,7 +158,7 @@ button{
     font-size: 20px;
     line-height: 40px;
     padding-left: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     background-color: #5d7c71; 
      
 }
@@ -166,9 +166,10 @@ button{
 /* .product-info ul{} */
 
 .product-info li{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color:#161d1b;
 }
+    
 
 .product-info>p{
     text-indent:2em;
@@ -193,10 +194,15 @@ button{
     align-items: center;
     grid-column: span 2;
 
+    padding: 20px;
+    box-sizing: border-box;
+
     color: #161d1b;
 }
 
-/* .size{} */
+.size{
+    display: inline-flex;
+}
 
 /* .size label{} */
 
@@ -204,6 +210,59 @@ button{
     width: 180px;
     height: 30px;
 }
+
+#amount{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount-box{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #98b0a7;
+}
+
+#product-amount{
+    width: 2.5em;
+    max-width: 2.5em;
+    height: 30px;
+    text-align: center; 
+    margin: 0;    
+    padding: 0;
+    border: 0;
+    border-left: 1px solid #98b0a7;
+    border-right: 1px solid #98b0a7;
+
+    box-shadow: inset 0 0 4px #98b0a7;
+}
+
+#button-minus, #button-plus{
+    height: 30px;
+    margin: 0;
+    border: 0;
+    background-color: #bfd0c9;
+    cursor: pointer ;
+}
+
+#button-minus:active, #button-plus:active{
+
+}
+
+
+/* -------------------------隱藏數字輸入箭頭------------------------------ */
+/* Chrome, Safari, Edge, Opera */
+#product-amount::-webkit-outer-spin-button,#product-amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#product-amount{
+  -moz-appearance: textfield;
+}
+/* -------------------------隱藏數字輸入箭頭------------------------------ */
 
 .buy a{
     color: #FFFF;
@@ -230,7 +289,7 @@ button{
 
 .middle-shell::before{  /*上分隔線*/
     content: "";
-    width: 1000px;
+    width: 100%;
     border: 1px solid #BEBABA;
 
     position: absolute;
@@ -242,7 +301,7 @@ button{
 
 .middle-shell::after{  /*下分隔線*/
     content: "";
-    width: 1000px;
+    width: 100%;
     border: 1px solid #BEBABA;
 
     position: absolute;
@@ -289,7 +348,7 @@ button{
 
 /* 下層相關文章 */
 .buttom-shell{
-    padding-top: 40px;
+    padding: 40px 20px 20px
 }
 
 .buttom-shell h3{    
@@ -301,9 +360,7 @@ button{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 40px;  
-
-    margin: 0 0 100px 85px;
+    gap: 40px; 
 
 } 
 
@@ -336,7 +393,7 @@ button{
     color: #98b0a7;
 }
 
-.buttom-shell li::before{
+.buttom-shell li:not(:last-child):before{
     content: "";
     display: block;
     height: 175px;
@@ -348,8 +405,8 @@ button{
     bottom: 0;
     top: 0;
     margin: auto;
-
 }
+
 
 .buttom-shell a:hover::before{
     content: "";
@@ -365,5 +422,154 @@ button{
     left: 0;
     right: 0;
     margin: auto;
+
+}
+
+/* ----------------------RWD預備------------------- */
+#filter{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: 40px auto;
+    font-weight: bold;
+
+    display: none;
+}
+
+#filter i{
+    color: white;
+}
+
+#filter:active{
+    color: #161d1b;
+}
+
+#filter:active i{
+    color: #161d1b;
+}
+
+/* -----------------------1000px------------------ */
+@media (width <= 1000px) {
+
+.shell-top{
+    margin-bottom: 40px;
+}    
+
+.hero-product{  
+    display: block;
+}
+
+.hero-product>img{
+   width: 100%;
+    
+}  
+
+.product-info{
+    height: auto;
+    margin: 15px 0 15px;
+}
+
+.about-buy{
+    gap: 30px;
+}
+
+.about-buy label{
+    width: 60px;
+}
+
+.size{
+    align-items: center;
+}
+
+.buy a{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 0 5px;
+}
+
+.middle-shell img{
+    width: auto;
+    height: 140px;
+}
+
+.middle-shell a{
+    text-align: center;
+}
+
+.middle-shell p{
+    width: 100px;
+    font-size: 14px;
+}
+
+}
+
+/* -----------------------820px------------------ */
+@media (width <= 820px) {
+
+.breadcrumb ol{   
+    justify-content: center;
+    font-size: 15px;
+}
+
+#filter{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.l-list{
+    background: linear-gradient(to right, #98b0a7,#f5f8f6); 
+    height: auto;
+
+    margin: 0;
+    width: 100%;
+
+    position: absolute;
+    top: -100%;
+    left: 0;
+
+    text-align: center;
+    opacity: 0;
+
+    z-index: 9999;
+}
+
+.l-list.active{
+    opacity: 1;
+    top:0;
+    transition: .3s;
+}
+
+.l-list li{
+    border-color:#728f85;
+    height: 60px;
+}
+
+.l-list li:hover::before{
+    display: none;
+}
+
+.l-list h2{
+    display: none;
+}
+
+.l-list a{
+    color: #161d1b;
+    line-height: 60px;
+    width: 100%;
+    height: 100%;
+}
+
+.l-list a:hover{
+    font-weight: normal;
+    color: #2b3632;
+}
+
+.l-list a:active{
+    font-weight: bold;
+    color: #2b3632;
+    background-color: #455c54;
+}
 
 }
