@@ -1,5 +1,7 @@
 // 轉場動畫
 window.addEventListener('load',()=>{
+   if(window.innerWidth > 820){
+   
     let preloader = document.querySelector('#preloader');
     let body =  document.querySelector('body');
  
@@ -19,6 +21,11 @@ window.addEventListener('load',()=>{
     setTimeout(()=>{
        clearInterval(Interval);  //停止Interval
     },1200)
- 
+   }else{
+    let preloader = document.querySelector('#preloader');
+    preloader.style.display = "none";
+   } 
  });
+
+
  
