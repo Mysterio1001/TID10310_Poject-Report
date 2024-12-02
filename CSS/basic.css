@@ -395,3 +395,187 @@ body{
 
 
 
+
+
+/* ---------------轉場動畫------------------ */
+
+body.loaded{
+    overflow: hidden;
+}
+
+#preloader{
+    width: 100%;
+    height: 100%;
+      overflow: hidden;
+      background-image: url(../img/image-index/bgi.png);
+      background-size:contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      z-index: 99999;
+  }
+
+  #preloader h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #preloader.loaded{
+    display: none;
+  }
+  
+  .animation1, .animation2{
+      width: 300px;
+      height: 250px;
+  
+      /* border: 1px solid;     */
+  }
+  
+  
+  
+  .DHHbody{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  
+  }
+  
+  
+  .DHHwing{
+      position: absolute;
+      z-index: 1;
+      left: 30px;
+      bottom: 165px;
+  }
+  
+  
+  .DHHbag{
+      position: absolute;
+      z-index: 2;
+      right: 80px;
+      bottom: 150px;
+  }
+  
+  .TDbody{
+    position: absolute;
+      right: 0;
+      bottom: 0;
+  }
+  
+  .TDwingT{
+    position: absolute;
+      right: 40px;
+      bottom: 160px;
+  
+      z-index: 1;
+  }
+  
+  .TDwingB{
+    position: absolute;
+      right: 110px;
+      bottom: 70px;
+  
+      z-index: 1;
+  }
+  
+  .TDbag{
+    position: absolute;
+      right: 45px;
+      bottom: 90px;
+  
+      z-index: 2;
+  }
+  
+  
+  
+  /* --------------動畫------------------ */
+  
+  .DHHwing{
+      animation: fly .1s infinite;
+  }
+  
+  .animation1{
+      animation: flying 1.5s infinite;
+  }
+  
+  @keyframes fly {
+          0% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(15deg); /* 向上振動 */
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+  
+  @keyframes flying {
+      0% {
+        transform: translate(-100%, 100%); /* 從左下畫面外 */
+      }
+      50%{
+        transform: translate(100% , 30%);
+      } 
+      70%{
+        transform: translate(70% , 30%);
+      }
+      100% {
+        transform: translate(200%, -100%); /* 到右上畫面外 */
+      }
+    }
+  
+  
+    .TDwingT{
+      animation: flyTD1 .1s infinite;
+    }
+  
+    .TDwingB{
+      animation: flyTD2 .1s infinite;
+    }
+  
+    .animation2{
+      animation: flyingTD 1.5s infinite;
+  }
+  
+    @keyframes flyTD1 {
+      0% {
+        transform: rotate(20deg);
+      }
+      50% {
+        transform: rotate(0deg); /* 向上振動 */
+      }
+      100% {
+        transform: rotate(20deg);
+      }
+    }
+  
+    @keyframes flyTD2 {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(20deg); /* 向上振動 */
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  
+    @keyframes flyingTD {
+      0% {
+          transform: translate(250%, 120%); /* 從右上畫面外 */
+      }
+      50% {
+          transform: translate(180%, 90%); /* 中間位置，稍微移動 */
+      }
+      70% {
+          transform: translate(10%, 80%); /* 略微偏移，增加動態效果 */
+      }
+      100% {
+          transform: translate(-100%, 100%); /* 到左下畫面外 */
+      }
+  }
+  

@@ -34,7 +34,7 @@ img{
 .main-pic{
     width: 100%;
     height: auto;
-    box-shadow: 0 4px 4px 0 #455c54;
+    /* box-shadow: 0 4px 4px 0 #455c54; */
     border-radius: 10px; /*外部容器變圓角*/   
     margin: 0 auto; 
 
@@ -50,6 +50,7 @@ img{
 
     filter: brightness(90%); 
     padding-bottom: 56.25%;
+    box-sizing: border-box;
 }
 
 .main-pic li:nth-child(1){

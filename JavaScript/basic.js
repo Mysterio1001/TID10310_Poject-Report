@@ -1,3 +1,4 @@
+
 let wrapper = document.querySelector('.wrapper');
 //監聽滾動事件
 window.addEventListener('scroll', function(){
