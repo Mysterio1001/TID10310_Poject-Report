@@ -17,7 +17,7 @@ window.addEventListener('load',()=>{
     },400);
  
     setTimeout(()=>{
-       clearInterval(intervalId);  //停止Interval
+       clearInterval(Interval);  //停止Interval
     },1200)
  
  });
