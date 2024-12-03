@@ -155,7 +155,14 @@ select{
 @media (width <= 600px) {
 
 .content{
-    width: 100%;    
+    width: 100%;   
+    height: 100%; 
+    border-radius: 0;
+    margin: 0;
+}
+
+.header-rwd1{
+    margin: 0;
 }
 
 .input-info li{
