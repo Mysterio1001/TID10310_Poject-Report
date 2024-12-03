@@ -10,7 +10,7 @@
 
 .content h1{
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: bold;
     margin-bottom: 35px;    
 }
@@ -23,8 +23,8 @@
 }
 .input-info li{
     display: flex;
-    margin-bottom: 30px;    
-    flex-wrap: wrap;    
+    margin-bottom: 30px;  
+    flex-wrap: wrap;  
 }
 
 .input-info label{
@@ -33,22 +33,29 @@
     font-weight: bold;
 }
 
-.input-info input{
-    width: 150px;
-    line-height: 1.6;
+.input-info input:not(#adderss_detail){
+    width: 40%;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.input-info select{
+   width: 25%;
+   min-width: 50px;
 }
 
 .input-info input, .input-info select{
     margin-left: 5px;
+    line-height: 1.6;
 }
 
 .input-info-left{
     width: 50%;
 }
 
-/* .input-info-left ul{}
+/* .input-info-left ul{} */
 
-.input-info-left li{} */
+/* .input-info-left li{} */
 
 .input-info-left label{
     width: 120px;
@@ -65,7 +72,7 @@
 .input-info-right li{} */
 
 .input-info-right label{
-    width: 80px;
+    width: 120px;
 }
 
 /* .input-info-right input{} */
@@ -92,7 +99,7 @@ input::placeholder{
 }
 
 button{
-    width: 70px;
+    width: 90px;
     height: 50px;
     font-weight: bold;
     border-radius: 50px;
@@ -106,4 +113,71 @@ button:hover{
 
 button:active{
     background:linear-gradient(to bottom, #394c45, #313e3a);
+}
+
+#birthday-month, #birthday-day{
+    width: 40px;
+} 
+
+/* 手機瀏覽器預設 */
+
+select{
+    border-radius: 0;   
+    color: #455c54;
+}
+
+
+
+
+/* -------------------------1200px------------------------- */
+@media (width <= 1200px) {
+.content{
+    padding: 55px 30px 5px;    
+}    
+}
+
+/* -------------------------980px------------------------- */
+@media (width <= 980px) {
+.input-info{
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.input-info-left, .input-info-right{
+    width: 400px;
+}
+
+
+}
+
+/* -------------------------600px------------------------- */
+@media (width <= 600px) {
+
+.content{
+    width: 100%;    
+}
+
+.input-info li{
+    align-items: center;
+    justify-content: center;
+}
+
+.input-info label{
+    width: 80px;
+    font-size: 14px;
+}
+
+.input-info-left li:nth-child(4) label{
+    width: 120px;
+}
+
+.input-info-left li:nth-child(4){
+    padding-right: 40px;
+} 
+
+#birthday-day~span{
+    margin-right: 30px;
+}
+
 }
