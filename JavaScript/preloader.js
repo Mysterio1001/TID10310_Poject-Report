@@ -14,12 +14,12 @@ window.addEventListener('load',()=>{
  
     let loading = document.querySelector('#loading');
  
-    let Interval = setInterval(()=>{
+    let IntervalItem = setInterval(()=>{
        loading.textContent += " ."   //Loading加上.號
     },400);
  
     setTimeout(()=>{
-       clearInterval(Interval);  //停止Interval
+       clearInterval(IntervalItem);  //停止Interval
     },1200)
    }else{
     let preloader = document.querySelector('#preloader');
