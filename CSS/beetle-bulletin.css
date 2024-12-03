@@ -30,7 +30,7 @@ body{
     background-color: #FFFF;
     text-align: center;
     border-radius: 10px;
-    font-size: 26px;
+    font-size:clamp(1rem, 2vw, 2rem);
     padding: 30px 30px 200px;
     color: #2b3632;
 }
@@ -45,11 +45,25 @@ body{
     font-weight: bold;
 }
 
+.rwd-box{
+    margin: 0 auto ;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+
+    display: none;
+}
+
+.moblie-img{
+    width: 95%;
+}
+
 /* 入場動畫圖 */
 .beetle-background{
     margin: 0 auto;
     background-image: url(../img/img-beetle-bulletin/main-pic-no-bg.png);
-    width: 950px;
+    width: 95%;
     height: 330px;
     background-size: cover;
     border-radius: 10px;
@@ -146,34 +160,45 @@ body{
 
 
 .content h1{
-    font-size: 40px;
+    font-size: clamp(1.5rem, 2.5vw,2.5rem);
     font-weight: bold;
     margin: 20px 0 40px;
 }
 
-.content h3{
-    font-size: 26px;
+.phone{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content h3 i{
-    padding-right: 20px;
-    font-size: 30px;
+.phone .fa-phone{
+    margin-right: 20px;
+    font-size: clamp(1rem, 2.5vw,1.5rem);
 }
 
-.content ul{
+.phone-number{
+    display: block;
+    text-decoration: none;
+    color: #161d1b;
+    font-size: clamp(1rem, 2.5vw,1.5rem);
+}
+
+.social-button ul{
     display: flex;
     margin-top: 50px;
     justify-content: center;
     gap: 90px;
 }
 
-.content li{
+.social-button li{
     width: 100px;
     height: 100px;
     background-size: cover;
 }
 
-.content a{
+.social-button a{
     display: block;
     width: 100px;
     height: 100px;
@@ -189,4 +214,65 @@ body{
 
 .social-button li:last-child{
     background-image: url(../img/img-beetle-bulletin/icon_IG.png);
+}
+
+/* ------------------1000px--------------------------- */
+@media (width <= 1000px) {
+.beetle-background{
+        display: none;
+}
+
+.rwd-box{
+    display: block;
+}
+
+
+.breadcrumb{
+    margin: 0 auto;
+}
+
+.breadcrumb ol{   
+    justify-content: center;
+    font-size: 15px;
+}
+
+}
+
+/* --------------580px----------------------------- */
+@media (width <= 580px) {
+
+.social-button ul{
+    gap: 60px;
+} 
+    
+.social-button li{
+    width: 60px;
+    height: 60px;
+}
+
+.social-button a{
+    width: 60px;
+    height: 60px;
+}
+
+}
+
+/* --------------430px----------------------------- */
+@media (width <= 430px) {
+
+.social-button ul{
+    gap: 40px;
+}   
+
+.social-button li{
+    width: 40px;
+    height: 40px;
+}
+
+.social-button a{
+    width: 40px;
+    height: 40px;
+}
+    
+    
 }

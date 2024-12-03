@@ -221,7 +221,7 @@ button{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #98b0a7;
+    /* border: 1px solid #98b0a7; */
 }
 
 #product-amount{
@@ -236,19 +236,28 @@ button{
     border-right: 1px solid #98b0a7;
 
     box-shadow: inset 0 0 4px #98b0a7;
+    border-radius: 0; /*手機瀏覽器調整*/
 }
 
 #button-minus, #button-plus{
     height: 30px;
     margin: 0;
     border: 0;
-    background-color: #bfd0c9;
+    background-color: #728f85;
     cursor: pointer ;
+
+    border-radius:0; /*手機瀏覽器調整*/
 }
 
-#button-minus:active, #button-plus:active{
-
+#button-minus{
+    border-radius: 10px 0 0 10px;
 }
+
+#button-plus{
+    border-radius:  0 10px 10px 0;
+}
+
+/* #button-minus:active, #button-plus:active{} */
 
 
 /* -------------------------隱藏數字輸入箭頭------------------------------ */
@@ -511,6 +520,10 @@ button{
 /* -----------------------820px------------------ */
 @media (width <= 820px) {
 
+.breadcrumb{
+    margin: 0 auto;
+}
+
 .breadcrumb ol{   
     justify-content: center;
     font-size: 15px;
@@ -581,6 +594,10 @@ button{
 /* -----------------------660px------------------ */
 @media (width <= 660px) {
 
+.breadcrumb ol{
+    font-size: 12px;
+}    
+
 .middle-shell ul{
     width: 80%;
     margin: 0 auto;
@@ -649,9 +666,13 @@ button{
 }
 
 /* -----------------------430px------------------ */
-@media (width <= 660px) {
+@media (width <= 430px) {
+
+.breadcrumb ol{
+    font-size: 9px;
+}    
 
 .buttom-shell p{
-    font-size: 10px;
+    font-size: 20px;
 }
 }
