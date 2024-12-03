@@ -86,14 +86,16 @@
         </ul>
 <!-- 搜尋列 -->
     <form class="search">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <input type="search" placeholder=" 搜尋">
+        <button type="submit" id="searchBtn" disabled>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="search" placeholder=" 搜尋" id="articleName">
     </form>
-    
     </div>
+    
     <div class="main-content">
         <ul>
-            <li>
+            <li class="article" data-name="長頸鹿鋸齒鍬形蟲飼育紀錄">
                 <div class="record-box">
                     <a href="#">
                         <h1>長頸鹿鋸齒鍬形蟲飼育紀錄</h1>
@@ -104,7 +106,7 @@
                 </div>
                 <img src="./img/image-beetle-lab/article1.png" alt="">
           </li>
-            <li>
+            <li class="article" data-name="產木選擇以及投產小技巧">
                 <div class="record-box">
                     <a href="#">
                         <h1>產木選擇以及投產小技巧</h1>
@@ -115,7 +117,7 @@
                     </div> 
                 <img src="./img/image-beetle-lab/article2.png" alt="">
           </li>
-          <li>
+          <li   class="article" data-name="五角大兜飼育&繁殖紀錄">
                 <div class="record-box">
                     <a href="#">
                         <h1>五角大兜飼育&繁殖紀錄</h1>
@@ -126,7 +128,7 @@
                 </div>
                 <img src="./img/image-beetle-lab/article3.png" alt="">
            </li>
-          <li>
+          <li   class="article" data-name="適合新手入門的幾種家門蟲">
                 <div class="record-box">
                     <a href="#">
                         <h1>適合新手入門的幾種家門蟲</h1>
@@ -137,7 +139,7 @@
                 </div>
                 <img src="./img/image-beetle-lab/article4.png" alt="">
           </li>
-          <li>
+          <li   class="article" data-name="哈里斯長角花金龜飼育紀錄">
                 <div class="record-box">
                     <a href="#">
                         <h1>哈里斯長角花金龜飼育紀錄</h1>
@@ -151,6 +153,81 @@
         </ul>
     </div>
 </div>
+<!-- RWD -->
+<!-- RWD搜尋列 -->
+<form class="rwd-search">
+    <button type="submit" id="rwd-searchBtn" disabled>
+        <i class="fa-solid fa-magnifying-glass fa-rwd"></i>
+    </button>
+    <input type="search" placeholder=" 搜尋" id="rwd-articleName">
+</form>
+</div>
+<!-- RWD內容 -->
+<div class="rwd-main-content">
+    <ul>
+        <li class="rwd-article" data-name="長頸鹿鋸齒鍬形蟲飼育紀錄">
+            <a href="#">
+            <div class="rwd-box">                
+                    <h1>長頸鹿鋸齒鍬形蟲飼育紀錄</h1>
+                    <h2>2024年12月9日</h2>
+                    <p>世界上最大的鍬形蟲-長頸鹿鋸齒鍬形蟲(Prosopocoilus giraffa)在市場上深受玩家們青睞，今天就要來分享這種蟲的繁殖方式、.....
+                    </p>
+                </div>
+                <img src="./img/image-beetle-lab/article1.png" alt="">
+            
+            </a>
+        </li>
+        <li class="rwd-article" data-name="產木選擇以及投產小技巧">
+            <a href="#">
+            <div class="rwd-box">
+                    <h1>產木選擇以及投產小技巧</h1>
+                    <h2>2024年10月1日</h2>
+                    <p>超硬、硬、中硬、中軟、軟、楓香、櫟木，到底要用哪一種產木投產呢?究竟是要全埋、半埋或著是直立放置?今天就要來教你如....                   
+                    </p>
+                </div> 
+                <img src="./img/image-beetle-lab/article2.png" alt="">
+            </a>
+      </li>
+      <li class="rwd-article" data-name="五角大兜飼育&繁殖紀錄">
+          <a href="#">
+            <div class="rwd-box">
+                    <h1>五角大兜飼育&繁殖紀錄</h1>
+                    <h2>2024年9月29日</h2>
+                    <p>五角大兜帥氣的五隻角特別吸睛，但是到底要怎麼樣才能順利繁殖出來，投產時要放水苔還是竹葉?這裡就要來分享讓五角大兜....                        
+                    </p>
+                </div>
+                <img src="./img/image-beetle-lab/article3.png" alt="">
+            </a>
+       </li>
+      <li class="rwd-article" data-name="適合新手入門的幾種家門蟲">
+            <a href="#">
+            <div class="rwd-box">
+                    <h1>適合新手入門的幾種家門蟲</h1>
+                    <h2>2024年7月3日</h2>
+                    <p>第一次養蟲到底該選什麼蟲?會不會很難養?我需不需要溫控呢?現在要來分享新手適合入門的幾種好生好養的家門蟲。第一種要....
+                    </p>
+                </div>
+                <img src="./img/image-beetle-lab/article4.png" alt="">
+            </a>
+      </li>
+      <li class="rwd-article" data-name="哈里斯長角花金龜飼育紀錄">
+            <a href="#">
+            <div class="rwd-box">
+                    <h1>哈里斯長角花金龜飼育紀錄</h1>
+                    <h2>2024年6月9日</h2>
+                    <p>哈里斯長角花金龜，又被稱作大海龜金龜，是種很特別的中型金龜，尤其公蟲頭上那隻顯著的長角，很多玩家深深被他吸引著....
+                    </p>
+                </div>
+                <img src="./img/image-beetle-lab/article5.png" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
 <nav class="page-button">
     <ul>
         <li>1</li>
@@ -175,4 +252,6 @@
     </div>
 </body>
 <script src="./JavaScript/basic.js" ></script>
+<script src="./JavaScript/jquery-3.7.1.js"></script>
+<script src="./JavaScript/beetle-bulletin.js"></script>
 </html>

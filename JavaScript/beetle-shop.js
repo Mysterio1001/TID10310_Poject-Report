@@ -26,14 +26,14 @@ $(document).ready(function(){
 $('#productName').on('input', function(){
     let productName = $(this).val(); //輸入框的值
     
-    if(productName !==''){
+    if(productName !== ''){
         $('#searchBtn').prop('disabled', false);
     }else{
         $('#searchBtn').prop('disabled', true); //空字串不啟用按鈕
     }
 
     //搜尋列空白時回復        
-    if(productName ===""){
+    if(productName === ""){
         $('.main-product ul li').show(); //顯示網頁版所有商品
         $('.rwd-product li').show();  //顯示手機版所有商品
     }
