@@ -1,7 +1,7 @@
 .content{
     margin: 0 auto;
     width: 50%;  /*全螢幕1200px時 寬度600px*/
-    max-width: 600px;
+    /* max-width: 600px; */
     font-size: 16px;
     color: #FFFF;
 }
@@ -191,5 +191,82 @@ td:nth-child(2),td:last-child{
 .total-price a:active{
     background:linear-gradient(to bottom, #394c45, #313e3a);
 }
+
+
+/* -------------------------1010px------------------------- */
+@media (width <= 1010px){
+.content{
+    width: 80%;
+}
+.box li{
+    flex-wrap: nowrap;
+}
+
+.ship-info-input{
+    padding: 20px 40px 40px;
+}
+
+#adderss_detail{
+    margin: 0;
+}
+
+.ship-info-input li>p{
+    margin: 10px 0 0 0;
+}
+
+.ship-info-input li:nth-child(4){
+    display: block;
+}
+}
+
+/* -------------------------685px------------------------- */
+@media (width <= 685px){
+
+.pay-type ul li:nth-child(4) {
+    flex-wrap: wrap;
+}    
+
+.pay-type ul li:nth-child(4) label{
+    margin-right: 345px;
+}
+
+.pay-type ul li:nth-child(4) input{
+    margin-top: 10px;
+}
+}
+
+/* -------------------------600px------------------------- */
+@media (width <= 600px){
+
+.ship-info-input ul li:nth-child(4){
+    flex-wrap: wrap;
+
+}
+
+#adderss_detail{
+    margin-top: 10px;
+}
+}
+
+
+/* -------------------------480px------------------------- */
+@media (width <= 480px){
+
+.ship-info-input ul li:nth-child(5) a,
+.ship-info-input ul li:nth-child(5) span
+{
+    font-size: clamp(0.6rem, 1vw, 1.2rem);
+}
+
+
+
+}
+
+
+
+
+
+
+
 
 
