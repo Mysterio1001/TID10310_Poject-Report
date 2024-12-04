@@ -14,7 +14,7 @@ body.loaded{
       top: 0;
       left: 0;
 
-      z-index: 99999;
+      z-index: 9999;
 
   }
 
@@ -183,12 +183,60 @@ body.loaded{
 
 
   /* ---------------------820px----------------- */
-/* 關閉手機版轉場 */
+/* 手機版轉場 */
 @media (width <= 820px) {
-  
-  
-  #preloader{
-    display: none;
+#preloader{
+    background-image: url(../img/image-index/rwd820-bgi.png);
+    /* background-size:contain; */
+}
+
+#preloader h1{
+  margin-top: 190px;
+}
+
+
+
+@keyframes flying {
+  0% {
+    transform: translate(-100%, 100%); /* 從左下畫面外 */
+  }
+  50%{
+    transform: translate(10% , 10%);
+  } 
+  90%{
+    transform: translate(10% , 30%);
+  }
+  100% {
+    transform: translate(200%, -100%); /* 到右上畫面外 */
   }
 }
-  
+
+@keyframes flyingTD {
+  0% {
+      transform: translate(300%, 120%); 
+  }
+ 
+  70% {
+      transform: translate(10%, -10%); 
+  }
+  100% {
+      transform: translate(-100%, 100%); 
+  }
+
+}
+
+
+}
+ 
+  /* ---------------------820px----------------- */
+/* 手機版轉場 */
+@media (width <= 820px) {
+#preloader{
+  background-image: url(../img/image-index/rwd-bgi.png);
+}
+
+#preloader h1{
+  margin-top: 220px;
+}
+
+}
