@@ -1,5 +1,5 @@
 .content{
-    width: 1150px;
+    width: 90%;
     margin: 0 auto 80px;
     color:#FFFF;
 }
@@ -42,20 +42,24 @@
 }
 
 .cart-detail li:last-child{
-    margin-left: 70px;
+    margin-left: 30px;
 }
 
 .cart{
     display: flex;
     justify-content: space-between;
     color: #161d1b;    
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
     
 
 .l-cart{
     background-color: #FFFF;
     border-top: 4px solid #bfd0c9;
-    border-right: 4px solid #bfd0c9
+    border-right: 4px solid #bfd0c9;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .product-detail{
@@ -88,9 +92,7 @@ label{
     width: 100px;
 }
 
-.product-detail select+p{
-    margin-left: 55px;
-}
+/* .product-detail select+p{} */
 
 .l-cart a{
     display: block;
@@ -118,6 +120,7 @@ label{
     width: 50%;
 
     padding: 45px 30px 30px;
+    box-sizing: border-box;
 }
 
 .how-to-ship{
@@ -168,5 +171,61 @@ label{
 .r-cart a:hover{
     color: #dfe8e4;
     background-color: #394c45;
+}
+
+
+/* ------------------------1200px------------------ */
+@media (width <= 1200px) {
+    
+.cart{
+    flex-direction: column;
+    align-items: center;
+}
+
+.l-cart, .r-cart{
+    width: 80%;
+    min-width:400px ;
+}
+
+.content .cart-detail ul{
+    justify-content: center;
+}
+
+.content .cart-detail ul li{
+    margin: 0;
+}
+
+.content .cart-detail li:first-child{
+    margin-right: 28%;
+}
+
+.content .cart-detail li:nth-child(2){
+    margin-right: 4%;
+}
+
+.content .cart-detail li:nth-child(3){
+    margin-left: 13.5%;
+}
+
+.content .cart-detail li:last-child{
+    margin-left: 4%;
+}
+
+.product-detail h1{
+    width: 50%;
+}
+
+.product-detail h1+p{
+    width: 15%;
+}
+}
+
+/* ------------------------570px------------------ */
+@media (width <= 570px) {
+
+.l-cart, .r-cart{
+    width: 60%;
+}
+
 }
 
