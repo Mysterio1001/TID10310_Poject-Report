@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 
     //點擊事件 (750px為界線)
-
+    
     if(window.innerWidth > 750){
 
     $('#all-news').click(function(){
@@ -71,25 +71,46 @@ $(document).ready(function(){
 
     //RWD 標題調上
 
+    //載入為非電腦版本時(小於750px) 先執行一次調整html結構
+
+    $('.news-list li').each(function(){
+        let newListLi = $(this);
+    if(window.innerWidth <= 750){
+        let spanDownContent = newListLi.find('.titleP').html(); //找出標題內容
+        newListLi.find('.titleP').remove();  //移除p
+        newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); //新增titleTop
+        newListLi.addClass('completed');
+    }
+})    
+    //螢幕寬度變化監聽事件
+    $(window).on('resize', function newsListTitleChange(){
     $('.news-list li').each(function(){
         let newListLi = $(this);
 
-        if(window.innerWidth > 750){
-            let spanDownContent = newListLi.find('span').html() //找出標題內容
-            newListLi.find('span');  //移除span
-            $(newListLi).prepend(`<span>${spanDownContent}</span>`);
+        if(window.innerWidth <= 750 && !newListLi.hasClass('completed')){
 
+            let spanDownContent = newListLi.find('.titleP').html(); //找出標題內容
+            newListLi.find('.titleP').remove();  //移除p
+            newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); //新增titleTop
+            newListLi.addClass('completed');
 
+        }else if(window.innerWidth > 750 && newListLi.hasClass('completed')){
 
-        }else{}
+            let spanTopContent = newListLi.find('.titleTop').html(); //找出標題內容
+            
+            newListLi.find('.titleTop').remove();  //移除p
+            newListLi.find('.small-box').children().eq(-1).before(`<p class='titleP'>${spanTopContent}</p>`); //新增titleP
+            newListLi.removeClass('completed');
 
+        }
+    });
+    });
 
-
-    })
-    
+   
     
     // 輪播器設定
     var swiper = new Swiper(".mySwiper", {
+        loop: true,
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {

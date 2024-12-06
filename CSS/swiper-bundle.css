@@ -19,7 +19,7 @@
 }
 /* FONT_END */
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #5d7c71;
   /*
   --swiper-preloader-color: var(--swiper-theme-color);
   --swiper-wrapper-transition-timing-function: initial;
@@ -42,6 +42,8 @@
   /* Fix of Webkit flickering */
   z-index: 1;
   display: block;
+
+  border-radius: 10px;
 }
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
@@ -266,6 +268,12 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+  width: 45px;
+  height: 45px;
+  /* border: 1px solid; */
+  border-radius: 50%;
+  background-color: #98b0a7;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -319,7 +327,13 @@
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid #2b3632;
+  margin-right: 5px;
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
@@ -328,8 +342,17 @@
 }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #2b3632;
+  margin-left: 5px;
 }
+
+
+
 /* Navigation font end */
 :root {
   /*
