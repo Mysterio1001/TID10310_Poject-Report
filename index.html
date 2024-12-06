@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="./CSS/basic.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/index-swiper.css">
+    <script src="./JavaScript/swiper-bundle.js"></script>
+
     <!-- 預先載入 -->
-    
-    
+       
 </head>
 <body>
     <!-- 轉場動畫 -->
@@ -93,24 +95,52 @@
             <h1>近期到貨</h1>
             <h2>珍稀品種 難得可貴</h2>
         </div>
-        <ul>
+        <ul class="middle-pic">
             <li><a href="#"><div class="trans"><img src="./img/image-index/product1.png" alt="DHB T-brand"></div><span>日本大鍬 T-brand血統</span></a></li>
             <li><a href="#"><div class="trans"><img src="./img/image-index/product2.png" alt="DHH"></div><span>DHH長戟大兜 河野血統</span></a></li>
         </ul>
-        <ul>
+        <ul class="middle-pic">
             <li><a href="#"><div class="trans"><img src="./img/image-index/product3.png" alt="AMB"></div><span>馬場黃金鬼鍬形蟲</span></a></li>
             <li><a href="#"><div class="trans"><img src="./img/image-index/product4.png" alt="HM"></div><span>螃蟹鍬形蟲 喀麥隆產</span></a></li>
         </ul>
+
+    <!-- Swiper  RWD -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide1"><img src="./img/image-index/product1.png" alt=""></div>
+      <div class="swiper-slide slide2"><img src="./img/image-index/product2.png" alt=""></div>
+      <div class="swiper-slide slide3"><img src="./img/image-index/product3.png" alt=""></div>
+      <div class="swiper-slide slide4"><img src="./img/image-index/product4.png" alt=""></div>
+
+    </div>
+  </div>
+</div>
         
     </div>
 <!-- 首頁第三部分 -->
     <div class="main-extra">
-        <ul>
+        <ul class="bottom-pic">
             <li><img src="./img/image-index/record1.png" alt="PGK 118mm"><span>PGK 118mm</span></li>
             <li><img src="./img/image-index/record2.png" alt="DTT 108mm"><span>DTT 108mm</span></li>
             <li><img src="./img/image-index/record3.png" alt="PGD 109mm"><span>PGD 109mm</span></li>
             <li><img src="./img/image-index/record4.png" alt="MT  90mm"><span>MT  90mm</span></li>
         </ul>
+
+                <!-- Swiper RWD2-->
+        <div class="swiper mySwiper bottom-swiper">
+            <div class="swiper-wrapper bottom-swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/image-index/record1.png" alt=""><span>PGK 118mm</span></div>
+            <div class="swiper-slide"><img src="./img/image-index/record2.png" alt=""><span>DTT 108mm</span></div>
+            <div class="swiper-slide"><img src="./img/image-index/record3.png" alt=""><span>PGD 109mm</span></li></div>
+            <div class="swiper-slide"><img src="./img/image-index/record4.png" alt=""><span>MT  90mm</span></li></div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+
         <div class="extra-title">
             <h1>最新飼育紀錄</h1>
             <h2>職人匠心 靈魂培育</h2>
@@ -132,4 +162,5 @@
  </body>
 <!-- 監聽滾動事件 -->
 <script src="./JavaScript/basic.js" ></script> 
+<script src="./JavaScript/main.js"></script>
 </html>
