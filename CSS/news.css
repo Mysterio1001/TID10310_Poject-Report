@@ -9,17 +9,19 @@
     margin: 50px 0 55px;
 }
 
-.tags ul li{
-    font-size: clamp(0.4rem, 1.5vw, 1rem);
-}
 
 .tags ul li, .news-list h3{
     width: 100px;
     height: 45px;
     line-height: 45px;
     text-align: center;
-   
+    
     border-radius: 5px;
+}
+
+.tags ul li{
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    width: 10%;
 }
 
 /* 過濾選單按鈕 */
@@ -243,6 +245,10 @@ html {
 @media  (width <= 600px){
 .tags ul{
     margin: 20px 0 0;
+}
+
+.tags ul li{
+    width: 15%;
 }
 
 .news-list li{

@@ -47,24 +47,24 @@ $(document).ready(function(){
     }else{
         $('#all-news').click(function(){
             // 點選按鈕顯示全部     
-            $('.news-list li').css('display','flex');
+            $('.news-list li').css('display','block');
         })
     
         $('#notice').click(function(){
             // 點選按鈕顯示公告    
-            $('.notice').css('display','flex');
+            $('.notice').css('display','block');
             $('.news-list li').not('.notice').css('display','none');
         })
     
         $('#even').click(function(){
             // 點選按鈕顯示活動    
-            $('.even').css('display','flex');
+            $('.even').css('display','block');
             $('.news-list li').not('.even').css('display','none');
         })
     
         $('#breeding-info').click(function(){
             // 點選按鈕顯示情報      
-            $('.breeding-info').css('display','flex');
+            $('.breeding-info').css('display','block');
             $('.news-list li').not('.breeding-info').css('display','none');
         })    
     }
