@@ -16,8 +16,13 @@ $(document).ready(function(){
         })
     })
 
+
+    //點擊事件 (750px為界線)
+
+    if(window.innerWidth > 750){
+
     $('#all-news').click(function(){
-        // 點選按鈕顯示全部      
+        // 點選按鈕顯示全部     
         $('.news-list li').css('display','block');
     })
 
@@ -39,4 +44,65 @@ $(document).ready(function(){
         $('.news-list li').not('.breeding-info').css('display','none');
     })    
 
+    }else{
+        $('#all-news').click(function(){
+            // 點選按鈕顯示全部     
+            $('.news-list li').css('display','flex');
+        })
+    
+        $('#notice').click(function(){
+            // 點選按鈕顯示公告    
+            $('.notice').css('display','flex');
+            $('.news-list li').not('.notice').css('display','none');
+        })
+    
+        $('#even').click(function(){
+            // 點選按鈕顯示活動    
+            $('.even').css('display','flex');
+            $('.news-list li').not('.even').css('display','none');
+        })
+    
+        $('#breeding-info').click(function(){
+            // 點選按鈕顯示情報      
+            $('.breeding-info').css('display','flex');
+            $('.news-list li').not('.breeding-info').css('display','none');
+        })    
+    }
+
+    //RWD 標題調上
+
+    $('.news-list li').each(function(){
+        let newListLi = $(this);
+
+        if(window.innerWidth > 750){
+            let spanDownContent = newListLi.find('span').html() //找出標題內容
+            newListLi.find('span');  //移除span
+            $(newListLi).prepend(`<span>${spanDownContent}</span>`);
+
+
+
+        }else{}
+
+
+
+    })
+    
+    
+    // 輪播器設定
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 })

@@ -9,6 +9,10 @@
     margin: 50px 0 55px;
 }
 
+.tags ul li{
+    font-size: clamp(0.4rem, 1.5vw, 1rem);
+}
+
 .tags ul li, .news-list h3{
     width: 100px;
     height: 45px;
@@ -52,12 +56,11 @@
 .news-list{
     /* margin-bottom: 100px; */
     color: #161d1b;
-    width: 1110px;
+    width: 100%;
     margin: 0 auto 100px;
 }
 
 .news-list ul{
-    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -95,123 +98,40 @@
     line-height: 20px;
 }
 
-/*swiper   大圖輪播*/
+/* 輪播器 */
 
-/* Swiper容器 */
-.swiper {
-    width: 1150px;
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-/* Slider */
-.slider {
+html {
     position: relative;
     height: 100%;
-    width: 1150px;
-}
+  }
 
-/* Slide圖片容器 */
-.slides {
-    display: flex;
-    transition: transform 0.3s ease-in-out; /* 平滑過渡 */
-    width: calc(1150px * 5); /* 總寬度 = 單張寬度 * 圖片數 */
-    height: 100%;
-}
-
-.slide {
-    width: 1150px; /* 單張圖片寬度 */
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide img{
+  .swiper {
     width: 100%;
-}
+    height: 100%;
+  }
 
-/* 按鈕樣式 */
-.slider-btn{
-    border: none;
-    border-radius: 50%;
-    background-color: rgba(128, 128, 128, 0.5); /* 預設灰色 (可修改) */
-    cursor: pointer;
-
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /*位移自身的50%*/
-    width: 50px;
-    height: 50px;
-    z-index: 10;
-}
-
-.slider-btn::before{
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border: 10px solid white;
-   
-}
-
-.prev{
-    left: 10px; /*position: absolute*/
-}
-
-.prev::before{
-    border-color: transparent white transparent transparent;
-    transform: translateX(-7px); /*位移自身的-7px*/
-}
-
-.next{
-    right: 10px; /*position: absolute*/
-}
-
-.next::before{
-    border-color: transparent transparent transparent white;  
-    transform: translateX(7px); /*位移自身的7px*/  
-}
-
-.slider-btn:hover {
-    background-color: rgba(128, 128, 128, 0.8); /* 修改顏色時，可調整此處 */
-}
-
-
-
-/* 點的樣式 */
-.dots {
-    position: absolute;
-    bottom: 20px;
+  .swiper-slide img {
+    display: block;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc; /* 預設灰色 (可修改) */
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #666; /* 預設深灰色 (可修改) */
-}
+    height: 100%;
+    object-fit: cover;
+  }
 
 /* 輪播圖各標題 */
-.box{    
+.swiper-slide{    
     position: relative;  /*輪播標題定位*/
 }
 
-.box::before{
+.swiper-slide::before{
     content: "";
     display: block;
     width: auto;
@@ -250,28 +170,68 @@
     content: "英特梅迪亞鬼豔鍬形蟲";
 }
 
-  /* -----------------------840px------------------- */
-  @media  (width <= 820px){
-.swiper{
-    width: 100vw;
+  /* -----------------------1100px------------------- */
+  @media  (width <= 1100px){
+.tags ul li{
+   width: 10%; 
 }
 
-.slider{
-    overflow: hidden;
-    width: 100vw;
+.news-list ul{
+    justify-content: center;
+
+}
+}
+/* -----------------------00px------------------- */
+@media  (width <= 800px){
+.tags ul li{
+    height: 35px;
+    line-height: 35px;
 }
 
-.box{
-    object-fit: contain;
+.tags ul{
+    margin: 20px 0;
+}
+}
+
+/* -----------------------750px------------------- */
+@media  (width <= 750px){
+.tags ul li{
+    height: 25px;
+    line-height: 25px;
+}
+
+.news-list ul{
+    margin-left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.news-list li{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 10px;
+}
+
+.news-list li img{
+    width: 40%;
+    height: 80px;
+    
+}
+
+.small-box{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.small-box p{
+    font-size: clamp(0.8rem,1.2vw,1.5rem);
+}
+
+.small-box span{
+    font-size: clamp(0.5rem,1vw,1rem);
+
 }
 
 
-
-
-
-.news-list{
-    /* display: none; */
 }
-
-
-  }
