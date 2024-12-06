@@ -45,7 +45,7 @@
 /* .box input{} */
 
 .box select{
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 /* 第一層 收件人資料填寫 */
@@ -128,6 +128,12 @@
 }
 
 /* .pay-type option{} */
+
+.credit-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 /* 第三層 訂單算式 */
 .order-info{    
@@ -246,6 +252,12 @@ td:nth-child(2),td:last-child{
 #adderss_detail{
     margin-top: 10px;
 }
+
+.credit-card img{
+    width: 10%;
+    height: 10%;
+}
+
 }
 
 
