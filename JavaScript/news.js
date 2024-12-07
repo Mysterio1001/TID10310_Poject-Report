@@ -73,38 +73,66 @@ $(document).ready(function(){
 
     //載入為非電腦版本時(小於750px) 先執行一次調整html結構
 
-    $('.news-list li').each(function(){
-        let newListLi = $(this);
-    if(window.innerWidth <= 750){
-        let spanDownContent = newListLi.find('.titleP').html(); //找出標題內容
-        newListLi.find('.titleP').remove();  //移除p
-        newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); //新增titleTop
-        newListLi.addClass('completed');
-    }
-})    
-    //螢幕寬度變化監聽事件
-    $(window).on('resize', function newsListTitleChange(){
-    $('.news-list li').each(function(){
-        let newListLi = $(this);
+//     $('.news-list li').each(function(){
+//         let newListLi = $(this);
+//     if(window.innerWidth <= 750  && !newListLi.hasClass('completed')){
+//         let spanDownContent = newListLi.find('.titleP').html(); //找出標題內容
+//         newListLi.find('.titleP').remove();  //移除p
+//         newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); //新增titleTop
+//         newListLi.addClass('completed');
+//     }
+// })    
+//     //螢幕寬度變化監聽事件
+//     $(window).on('resize', function newsListTitleChange(){
+//     $('.news-list li').each(function(){
+//         let newListLi = $(this);
 
-        if(window.innerWidth <= 750 && !newListLi.hasClass('completed')){
+//         if(window.innerWidth <= 750 && !newListLi.hasClass('completed')){
 
-            let spanDownContent = newListLi.find('.titleP').html(); //找出標題內容
-            newListLi.find('.titleP').remove();  //移除p
-            newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); //新增titleTop
-            newListLi.addClass('completed');
+//             let spanDownContent = newListLi.find('.titleP').html(); //找出標題內容
+//             newListLi.find('.titleP').remove();  //移除p
+//             newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); //新增titleTop
+//             newListLi.addClass('completed');
 
-        }else if(window.innerWidth > 750 && newListLi.hasClass('completed')){
+//         }else if(window.innerWidth > 750 && newListLi.hasClass('completed')){
 
-            let spanTopContent = newListLi.find('.titleTop').html(); //找出標題內容
+//             let spanTopContent = newListLi.find('.titleTop').html(); //找出標題內容
             
-            newListLi.find('.titleTop').remove();  //移除p
-            newListLi.find('.small-box').children().eq(-1).before(`<p class='titleP'>${spanTopContent}</p>`); //新增titleP
-            newListLi.removeClass('completed');
+//             newListLi.find('.titleTop').remove();  //移除p
+//             newListLi.find('.small-box').children().eq(-1).before(`<p class='titleP'>${spanTopContent}</p>`); //新增titleP
+//             newListLi.removeClass('completed');
 
+//         }
+//     });
+//     });
+
+function updateNewsList() {
+    $('.news-list li').each(function () {
+        let newListLi = $(this);
+
+        // 若螢幕寬度小於等於 750 且尚未處理
+        if (window.innerWidth <= 750 && !newListLi.hasClass('completed')) {
+            let spanDownContent = newListLi.find('.titleP').html(); // 找出標題內容
+            newListLi.find('.titleP').remove();  // 移除 titleP
+            newListLi.prepend(`<p class='titleTop'>${spanDownContent}</p>`); // 新增 titleTop
+            newListLi.addClass('completed');
+        }
+        // 若螢幕寬度大於 750 且已處理過
+        else if (window.innerWidth > 750 && newListLi.hasClass('completed')) {
+            let spanTopContent = newListLi.find('.titleTop').html(); // 找出標題內容
+            newListLi.find('.titleTop').remove();  // 移除 titleTop
+            newListLi.find('.small-box').children().eq(-1).before(`<p class='titleP'>${spanTopContent}</p>`); // 新增 titleP
+            newListLi.removeClass('completed');
         }
     });
-    });
+}
+
+// 初始化執行一次
+updateNewsList();
+
+// 螢幕寬度變化監聽事件
+$(window).on('resize', updateNewsList);
+
 
    
     
