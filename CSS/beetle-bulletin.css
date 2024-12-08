@@ -163,6 +163,7 @@ body{
     font-size: clamp(1.5rem, 2.5vw,2.5rem);
     font-weight: bold;
     margin: 20px 0 40px;
+    line-height: 1.5;
 }
 
 .phone{

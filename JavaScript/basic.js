@@ -7,12 +7,9 @@ window.addEventListener('scroll', function(){
     if(window.scrollY > 30){
        wrapper.style.opacity = '0.95';
     }else{
-       wrapper.style.opacity = '1';
-    
+       wrapper.style.opacity = '1';    
     }
 });
-
-
 
 
 // RWD進入式選單動畫
