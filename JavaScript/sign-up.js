@@ -2,7 +2,7 @@
 
 let YYYY = new Date().getFullYear(); //取得今年
 let MM = new Date().getMonth()+1; //取得當月
-let DD = new Date().getDay()+1; //取得當日
+let DD = new Date().getDate(); //取得當日
 
 console.log(`${YYYY}年,${MM}月,${DD}日`);
 
