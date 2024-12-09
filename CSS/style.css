@@ -488,6 +488,17 @@ object-fit: cover;
     pointer-events: none;
 }
 
+.ani-ar{
+    animation: moveLeftRight 1s infinite alternate; 
+}
+
+@keyframes moveLeftRight {
+    0% {
+      transform: translateX(-10px); /* 向左偏移 */
+    }
+    100% {
+      transform: translateX(10px); /* 向右偏移 */
+    }
 
 
 }
