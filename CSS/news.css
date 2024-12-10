@@ -233,7 +233,7 @@ html {
 }
 
 .small-box span{
-    font-size: clamp(0.6rem,1vw,1rem);
+    font-size: clamp(0.8rem,1vw,1rem);
     padding: 5px;
     box-sizing: border-box;
 

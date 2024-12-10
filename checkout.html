@@ -68,8 +68,8 @@
         <h1>寄件資料填寫</h1>
         <ul>
             <li>
-                <input type="radio" name="same-as-memberinfo" value="same-as-memberinfo">
-                同會員資料
+                <input id="sameAsMemberinfo" type="radio" name="same-as-memberinfo" value="same-as-memberinfo">
+                <label for="sameAsMemberinfo">同會員資料</label>
             </li>
             <li>
                 <label for="name">收件人姓名</label>
@@ -155,13 +155,13 @@
         <h1>付款方式</h1>
         <ul>
             <li>
-                <input type="radio" name="pay-method" value="pay-by-bank">
-                <span>郵局、銀行轉帳</span>
+                <input id="payByBank" type="radio" name="pay-method" value="pay-by-bank">
+                <label for="payByBank">郵局、銀行轉帳</label>
             </li>
             <li>
-                <input type="radio" name="pay-method" value="pay-by-creditcard" checked>
+                <input id="payByCreditcard"type="radio" name="pay-method" value="pay-by-creditcard" checked>
                 <div class="credit-card">
-                    <span>信用卡付款</span>
+                    <label for="payByCreditcard">信用卡付款</label>
                     <img src="./img/img-checkout/jcb.png" alt="jcb">
                     <img src="./img/img-checkout/master.png" alt="master">
                     <img src="./img/img-checkout/visa.png" alt="visa">

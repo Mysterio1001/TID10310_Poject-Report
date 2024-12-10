@@ -207,6 +207,7 @@ button{
 .size select{
     width: 180px;
     height: 30px;
+    color: #161d1b;
 }
 
 #amount{
@@ -214,6 +215,7 @@ button{
     justify-content: center;
     align-items: center;
 }
+
 
 .amount-box{
     display: inline-flex;
@@ -243,6 +245,7 @@ button{
     border: 0;
     background-color: #728f85;
     cursor: pointer ;
+    color: black;
 
     border-radius:0; /*手機瀏覽器調整*/
 }

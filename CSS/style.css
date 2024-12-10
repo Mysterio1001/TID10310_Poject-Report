@@ -457,11 +457,11 @@ object-fit: cover;
 }
 
 /* 滑動提示 */
-#cover-middle{
+#cover-middle, #cover-middle-right{
     z-index: 2;
     border-radius: 1px solid;
     background-color: #98b0a7;
-    width: 40%;
+    width: 20%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -483,7 +483,8 @@ object-fit: cover;
 }
 
 .swiper #cover-middle .arrows .arrow{
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-bottom: 0;
     font-size: 2rem;
     pointer-events: none;
 }
@@ -584,7 +585,7 @@ object-fit: cover;
     z-index: 2;
     border-radius: 1px solid;
     background-color: #98b0a7;
-    width: 40%;
+    width: 20%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -606,7 +607,8 @@ object-fit: cover;
 }
 
 .swiper #cover-extra .ex-arrows .ex-arrow{
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-bottom: 0;
     font-size: 2rem;
     pointer-events: none;
     margin-bottom: 80px;

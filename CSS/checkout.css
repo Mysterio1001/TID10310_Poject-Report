@@ -38,7 +38,7 @@
 
 .box label{
     flex-shrink: 0;  /*防止label被擠壓縮小*/
-    width: 80px;
+    width: 20%px;
     margin-right: 20px;
 }
 
