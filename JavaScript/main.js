@@ -51,46 +51,46 @@ rwdExtra.addEventListener('touchmove', function(end){
 
 // -----------------------------------------------------
 
-// 手機版本滑動提示(右)
-// 第二部
-let rwdMiddle = document.querySelector('.rwd-middle');
-let coverMiddle = document.querySelector('#cover-middle')
+// // 手機版本滑動提示(右)
+// // 第二部
+// let rwdMiddle = document.querySelector('.rwd-middle');
+// let coverMiddle = document.querySelector('#cover-middle')
 
-// 紀錄X座標
-let startX = 0;
+// // 紀錄X座標
+// let startX = 0;
 
-// 更新手指觸控點原點
-rwdMiddle.addEventListener('touchstart', function(start){
-    startX = start.touches[0].clientX;
-});
+// // 更新手指觸控點原點
+// rwdMiddle.addEventListener('touchstart', function(start){
+//     startX = start.touches[0].clientX;
+// });
 
-// 監聽滑動 且 計算滑動方向&距離(太短不觸發)
-rwdMiddle.addEventListener('touchmove', function(end){
-    let endX = end.touches[0].clientX;
+// // 監聽滑動 且 計算滑動方向&距離(太短不觸發)
+// rwdMiddle.addEventListener('touchmove', function(end){
+//     let endX = end.touches[0].clientX;
 
-    if(endX - startX < -10){
-    coverMiddle.style.opacity = '0';
-    }
-})
+//     if(endX - startX < -10){
+//     coverMiddle.style.opacity = '0';
+//     }
+// })
 
 
-// 第三部分
-let rwdExtra = document.querySelector('.rwd-extra');
-let coverExtra = document.querySelector('#cover-extra')
+// // 第三部分
+// let rwdExtra = document.querySelector('.rwd-extra');
+// let coverExtra = document.querySelector('#cover-extra')
 
-// 紀錄X座標
-let exStartX = 0;
+// // 紀錄X座標
+// let exStartX = 0;
 
-// 更新手指觸控點原點
-rwdExtra.addEventListener('touchstart', function(start){
-    exStartX = start.touches[0].clientX;
-});
+// // 更新手指觸控點原點
+// rwdExtra.addEventListener('touchstart', function(start){
+//     exStartX = start.touches[0].clientX;
+// });
 
-// 監聽滑動 且 計算滑動方向&距離(太短不觸發)
-rwdExtra.addEventListener('touchmove', function(end){
-    let exEndX = end.touches[0].clientX;
+// // 監聽滑動 且 計算滑動方向&距離(太短不觸發)
+// rwdExtra.addEventListener('touchmove', function(end){
+//     let exEndX = end.touches[0].clientX;
 
-    if(exEndX - exStartX < -10){
-    coverExtra.style.opacity = '0';
-    }
-})
+//     if(exEndX - exStartX < -10){
+//     coverExtra.style.opacity = '0';
+//     }
+// })
